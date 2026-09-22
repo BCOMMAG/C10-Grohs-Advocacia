@@ -2,69 +2,76 @@
 @import "lenis/dist/lenis.css";
 
 :root {
-  --bg-primary: #FFFFFF;
+  --bg-primary: #FAFAFA;
   --bg-card: #FFFFFF;
-  --bg-secondary: #F4EAE6;
-  --text-main: #1A1D20;
-  --text-muted: #596168;
-  --accent: #D4A396;
-  --accent-hover: #A6766A;
-  --accent-light: #FBF4F1;
-  --accent-dark: #A6766A;
-  --border-subtle: #D4A396;
+  --bg-secondary: #F0F2F4;
+  --text-main: #1C2023;
+  --text-muted: #4E5357;
+  --accent: #4A3221;
+  --accent-hover: #372417;
+  --accent-light: #F4EFEA;
+  --accent-dark: #372417;
+  --metal-titanium: #A0A5A9;
+  --metal-platinum: #D1D5D8;
+  --metal-graphite: #4E5357;
+  --border-subtle: #D1D5D8;
 }
 
 html.dark {
-  --bg-primary: #0F1215;
-  --bg-card: #151A1F;
-  --bg-secondary: #1A2128;
-  --text-main: #F3F4F6;
-  --text-muted: #A3ABB4;
-  --accent: #D4A396;
-  --accent-hover: #E2B9AF;
-  --accent-light: #2A211E;
-  --accent-dark: #A6766A;
-  --border-subtle: #8A645A;
+  --bg-primary: #121518;
+  --bg-card: #1A1E22;
+  --bg-secondary: #23282E;
+  --text-main: #FAFAFA;
+  --text-muted: #A0A5A9;
+  --accent: #C59364;
+  --accent-hover: #D7A779;
+  --accent-light: #2A211B;
+  --accent-dark: #A47242;
+  --metal-titanium: #A0A5A9;
+  --metal-platinum: #D1D5D8;
+  --metal-graphite: #4E5357;
+  --border-subtle: #333A41;
 }
 
 body {
   background-color: var(--bg-primary);
   color: var(--text-main);
-  font-family: var(--font-body), sans-serif;
+  font-family: var(--font-body), Georgia, serif;
   transition: background-color 0.3s ease, color 0.3s ease;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Tipografia de Títulos e Cabeçalhos: Philosopher */
+/* Tipografia de Títulos e Cabeçalhos: Oswald */
 h1, h2, h3, h4, h5, h6, .font-heading {
-  font-family: var(--font-heading), serif;
-  letter-spacing: 0.015em;
+  font-family: var(--font-heading), sans-serif;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
 }
 
-/* Tipografia de Leitura: Mulish */
+/* Tipografia de Leitura: Source Serif 4 */
 .font-body {
-  font-family: var(--font-body), sans-serif;
+  font-family: var(--font-body), Georgia, serif;
 }
 
-/* Bordas sutis editoriais */
+/* Bordas sutis editoriais geométricas */
 .editorial-border {
-  border-color: rgba(212, 163, 150, 0.25);
+  border-color: var(--border-subtle);
 }
 
 .editorial-border-b {
-  border-bottom: 1px solid rgba(212, 163, 150, 0.25);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .editorial-border-t {
-  border-top: 1px solid rgba(212, 163, 150, 0.25);
+  border-top: 1px solid var(--border-subtle);
 }
 
 .editorial-border-l {
-  border-left: 1px solid rgba(212, 163, 150, 0.25);
+  border-left: 1px solid var(--border-subtle);
 }
 
 .editorial-border-r {
-  border-right: 1px solid rgba(212, 163, 150, 0.25);
+  border-right: 1px solid var(--border-subtle);
 }
 
 /* Marcador geométrico estilo suíço/editorial */
@@ -84,10 +91,11 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   justify-content: center;
   border-radius: 9999px;
   padding: 0.75rem 1.75rem;
-  font-family: var(--font-heading), serif;
+  font-family: var(--font-heading), sans-serif;
   font-weight: 600;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
   font-size: 0.9375rem;
+  text-transform: uppercase;
   transition: all 0.3s cubic-bezier(0.3, 0.86, 0.36, 0.95);
 }
 
@@ -103,7 +111,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   bottom: -2px;
   left: 0;
   width: 0;
-  height: 1.5px;
+  height: 2px;
   background-color: currentColor;
   transition: width 0.3s ease;
 }
@@ -115,13 +123,13 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 /* Pulso sutil no botão flutuante de WhatsApp */
 @keyframes pulseWhatsApp {
   0% {
-    box-shadow: 0 0 0 0 rgba(212, 163, 150, 0.5);
+    box-shadow: 0 0 0 0 rgba(74, 50, 33, 0.5);
   }
   70% {
-    box-shadow: 0 0 0 14px rgba(212, 163, 150, 0);
+    box-shadow: 0 0 0 14px rgba(74, 50, 33, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(212, 163, 150, 0);
+    box-shadow: 0 0 0 0 rgba(74, 50, 33, 0);
   }
 }
 
@@ -129,7 +137,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   animation: pulseWhatsApp 2.2s infinite;
 }
 
-/* Animação suave para carrossel infinito */
+/* Animação suave para carrossel contínuo */
 @keyframes marquee {
   0% {
     transform: translateX(0%);

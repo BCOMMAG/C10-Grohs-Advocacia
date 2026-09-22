@@ -1,50 +1,43 @@
-﻿import { OFFICE_INFO, LAWYER_PROFILE } from "./data";
+import { OFFICE_INFO, LAWYER_PROFILE } from "./data";
 
 export function getLegalServiceSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    "@id": "https://sloaneandrade-adv.vercel.app/#legalservice",
+    "@id": "https://grohs.adv.br/#legalservice",
     name: OFFICE_INFO.name,
-    alternateName: "Sloane Andrade Advocacia",
+    alternateName: "Grohs Advocacia Trabalhista",
     description:
-      "Advocacia especializada em Direito do Trabalho, Previdenciário/Acidentário, Direito Civil e Família em Guaíra/SP e região. Mais de 10 anos de experiência e atendimento humanizado.",
-    url: "https://sloaneandrade-adv.vercel.app",
-    telephone: "+5517981217474",
+      "Advocacia trabalhista e previdenciária exercida com rigor técnico, especialização e 13 anos de experiência em Curitiba/PR. Dr. João Rodrigo Pimentel Grohs.",
+    url: "https://grohs.adv.br",
+    telephone: `+${OFFICE_INFO.whatsappNumber}`,
     email: OFFICE_INFO.email,
     priceRange: "$$",
-    image: "https://sloaneandrade-adv.vercel.app/logo_semfundo_escritapreta_paramodoclaro.png",
-    logo: "https://sloaneandrade-adv.vercel.app/logo_semfundo_escritapreta_paramodoclaro.png",
+    image: "https://grohs.adv.br/Logosemfundo_escritaescura_usarnomodoclaro.png",
+    logo: "https://grohs.adv.br/Logosemfundo_escritaescura_usarnomodoclaro.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "R. 14 B, 01077 - Joaquim Pereira Lelis",
-      addressLocality: "Guaíra",
-      addressRegion: "SP",
-      postalCode: "14790-000",
+      streetAddress: "Av. Desembargador Hugo Simas, 1120 - Sl 207 - Bom Retiro",
+      addressLocality: "Curitiba",
+      addressRegion: "PR",
+      postalCode: "80520-250",
       addressCountry: "BR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -20.3181,
-      longitude: -48.3106,
+      latitude: -25.4058,
+      longitude: -49.2783,
     },
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         opens: "09:00",
-        closes: "17:00",
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Friday"],
-        opens: "09:00",
-        closes: "16:00",
+        closes: "18:00",
       },
     ],
     sameAs: [
       OFFICE_INFO.social.instagram,
-      OFFICE_INFO.social.facebook,
       OFFICE_INFO.social.linkedin,
     ],
     employee: [

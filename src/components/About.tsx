@@ -42,7 +42,7 @@ export function About() {
         );
       }
 
-      // 2. Foto oficial da Dra. Sloane Andrade: entrada com elevação e scale elegante
+      // 2. Foto oficial do Dr. João Rodrigo Grohs: entrada com elevação e scale elegante
       if (photoCardRef.current) {
         gsap.fromTo(
           photoCardRef.current,
@@ -85,7 +85,7 @@ export function About() {
         }
       }
 
-      // 4. Princípios (Missão, Visão e Valores) estilo Pilares Institucionais
+      // 4. Princípios (Missão, Visão e Valores)
       if (cardsRef.current) {
         const items = cardsRef.current.querySelectorAll(".about-pillar-item");
         if (items.length > 0) {
@@ -132,17 +132,17 @@ export function About() {
         >
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <span className="bullet-indicator text-[#A6766A]" />
-              <span className="font-heading uppercase text-xs tracking-widest text-[#A6766A] font-bold">
-                01 / Perfil Profissional & Trajetória
+              <span className="bullet-indicator text-[#4A3221] dark:text-[#A0A5A9]" />
+              <span className="font-heading uppercase text-xs tracking-widest text-[#4A3221] dark:text-[#A0A5A9] font-bold">
+                01 / Perfil Profissional & Experiência
               </span>
             </div>
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-[var(--text-main)] font-semibold">
-              Sobre a Dra. Sloane Andrade
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-[var(--text-main)] font-semibold uppercase">
+              Dr. João Rodrigo Grohs
             </h2>
           </div>
           <p className="font-body text-sm sm:text-base text-[var(--text-muted)] max-w-xl leading-relaxed">
-            Mais de uma década aliando dedicação dogmática, empatia acolhedora e compromisso irrestrito com a segurança jurídica de cada cliente.
+            Advocacia trabalhista exercida por profissionais com especialização e ampla experiência para um trabalho de excelência.
           </p>
         </div>
 
@@ -151,40 +151,40 @@ export function About() {
           {/* Coluna de Conteúdo e Textos */}
           <div ref={textContentRef} className="lg:col-span-7 order-2 lg:order-1 flex flex-col justify-start space-y-6">
             <div className="about-text-anim space-y-2">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#A6766A]/10 border border-[#A6766A]/30 text-xs font-heading font-semibold text-[#A6766A]">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#4A3221]/10 dark:bg-white/10 border border-[#4A3221]/30 dark:border-white/20 text-xs font-heading font-semibold text-[#4A3221] dark:text-[#D1D5D8] uppercase tracking-wide">
                 <Sparkles className="w-3.5 h-3.5" />
-                <span>Advocacia Combina Técnica & Empatia</span>
+                <span>13 Anos de Atuação em Advocacia Privada</span>
               </div>
-              <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-[var(--text-main)] leading-tight">
-                Advocacia Personalizada, Próxima e Resolutiva
+              <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-[var(--text-main)] leading-tight uppercase">
+                Especialização e Rigor no Direito do Trabalho
               </h3>
             </div>
 
             {/* Citação de Proposta de Valor */}
-            <div className="about-text-anim p-4 sm:p-5 rounded-2xl bg-[var(--bg-secondary)]/60 border border-[var(--border-subtle)]/30 border-l-4 border-l-[#A6766A] shadow-2xs">
+            <div className="about-text-anim p-4 sm:p-5 rounded-2xl bg-[var(--bg-secondary)]/60 border border-[var(--border-subtle)]/30 border-l-4 border-l-[#4A3221] shadow-2xs">
               <p className="font-heading italic text-sm sm:text-base text-[var(--text-main)] leading-relaxed">
                 &ldquo;{LAWYER_PROFILE.quote}&rdquo;
               </p>
             </div>
 
-            {/* Resumo da trajetória — Trecho atualizado conforme solicitação do usuário */}
+            {/* Resumo da trajetória */}
             <p className="about-text-anim font-body text-sm sm:text-base text-[var(--text-main)] leading-relaxed font-normal">
-              Com mais de 10 anos de prática forense consolidada em Guaíra/SP e comarcas paulistas, a Dra. Sloane Ferreira de Andrade conduz uma advocacia estratégica que prioriza o contato direto com a titular em todas as fases do processo.
+              Grohs Advocacia Trabalhista é fruto do trabalho do advogado João Rodrigo Pimentel Grohs, cuja experiência na advocacia privada alcança 13 anos. Por acreditar que os profissionais tendem a entregar melhores resultados quando são especializados na área que se propõem a trabalhar, e pela vocação pelas matérias afetas ao Direito do Trabalho e Direito Previdenciário, a atuação do escritório está concentrada nessas disciplinas.
             </p>
 
             {/* Destaques Rápidos */}
             <div className="about-text-anim grid grid-cols-2 sm:grid-cols-3 gap-3 pt-1">
               <div className="p-3.5 rounded-xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/30 shadow-2xs">
-                <span className="font-heading text-xs font-bold text-[#A6766A] block">+10 Anos</span>
-                <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">Trajetória e solidez jurídica</span>
+                <span className="font-heading text-xs font-bold text-[#4A3221] dark:text-[#A0A5A9] block">13 Anos</span>
+                <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">Experiência na advocacia privada</span>
               </div>
               <div className="p-3.5 rounded-xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/30 shadow-2xs">
-                <span className="font-heading text-xs font-bold text-[#A6766A] block">100% Pessoal</span>
-                <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">Atendimento com a titular</span>
+                <span className="font-heading text-xs font-bold text-[#4A3221] dark:text-[#A0A5A9] block">100% Pessoal</span>
+                <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">Atendimento direto com o titular</span>
               </div>
               <div className="p-3.5 rounded-xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/30 shadow-2xs col-span-2 sm:col-span-1">
-                <span className="font-heading text-xs font-bold text-[#A6766A] block">MBA Especialista</span>
-                <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">Trabalhista e Acidentário</span>
+                <span className="font-heading text-xs font-bold text-[#4A3221] dark:text-[#A0A5A9] block">UniCuritiba & EMATRA-IX</span>
+                <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">Formação jurídica de alto rigor</span>
               </div>
             </div>
 
@@ -193,10 +193,10 @@ export function About() {
               <button
                 type="button"
                 onClick={handleToggleExpand}
-                className="btn-pill bg-white dark:bg-[#151A1F] text-[#1A1D20] dark:text-white border-2 border-[#A6766A] hover:bg-[#A6766A] hover:text-white dark:hover:bg-[#A6766A] dark:hover:text-white gap-2 py-3 px-6 text-xs sm:text-sm font-semibold shadow-xs hover-lift transition-all cursor-pointer flex items-center"
+                className="btn-pill bg-white dark:bg-[#151A1F] text-[#1A1D20] dark:text-white border-2 border-[#4E5357] hover:bg-[#4A3221] hover:text-white dark:hover:bg-[#4A3221] dark:hover:text-white gap-2 py-3 px-6 text-xs sm:text-sm font-semibold shadow-xs hover-lift transition-all cursor-pointer flex items-center"
                 aria-expanded={isExpanded}
               >
-                <span>{isExpanded ? "Ocultar detalhes curriculares" : "Saber mais sobre a Dra. Sloane"}</span>
+                <span>{isExpanded ? "Ocultar detalhes curriculares" : "Saber mais sobre a trajetória do Dr. João Rodrigo"}</span>
                 <ChevronDown
                   className={`w-4 h-4 transition-transform duration-300 ${
                     isExpanded ? "rotate-180" : "rotate-0"
@@ -208,10 +208,10 @@ export function About() {
                 href={OFFICE_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-pill bg-[#A6766A] hover:bg-[#8d5e53] text-white gap-2 py-3 px-6 text-xs sm:text-sm shadow-xs hover-lift transition-all flex items-center"
+                className="btn-pill bg-[#4A3221] hover:bg-[#372417] text-white gap-2 py-3 px-6 text-xs sm:text-sm shadow-xs hover-lift transition-all flex items-center"
               >
                 <MessageSquare className="w-4 h-4 fill-white" />
-                <span>Solicitar Atendimento Direto</span>
+                <span>Solicitar Análise de Caso</span>
               </a>
             </div>
 
@@ -219,18 +219,18 @@ export function About() {
             {isExpanded && (
               <div className="space-y-6 pt-4 border-t border-[var(--border-subtle)]/30 animate-fade-in-down">
                 <div className="p-5 sm:p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/30 shadow-xs space-y-3">
-                  <h4 className="font-heading text-base font-bold text-[var(--text-main)]">
-                    Histórico Profissional Completo
+                  <h4 className="font-heading text-base font-bold text-[var(--text-main)] uppercase">
+                    Trajetória Forense e Foco em Excelência
                   </h4>
                   <p className="font-body text-xs sm:text-sm text-[var(--text-muted)] leading-relaxed">
-                    Graduada em Direito pelo Centro Universitário da Fundação Educacional de Barretos (UNIFEB) em 2016 e pós-graduada com MBA em Direito do Trabalho e Previdenciário com foco em acidente do trabalho pela Faculdade Legale. Possui cursos de extensão em Formação do Advogado Civilista e Super Formação do Advogado Trabalhista. Atuou previamente junto à Polícia Civil do Estado de São Paulo (Guaíra/SP) e consolidou uma advocacia autônoma combativa, humanizada e personalizada, com atendimento direto em âmbito consultivo e contencioso.
+                    Com graduação concluída em 2012 pelo tradicional Centro Universitário Curitiba (UniCuritiba) e curso de formação de magistrados pela EMATRA-IX em 2021, Dr. João Rodrigo Pimentel Grohs construiu uma carreira focada na resolução estratégica de conflitos trabalhistas individuais e coletivos, assegurando que cada cliente tenha acompanhamento técnico refinado e atendimento pautado pela ética e transparência.
                   </p>
                 </div>
 
                 <div className="space-y-3">
-                  <h4 className="font-heading text-base font-bold text-[var(--text-main)] flex items-center gap-2">
-                    <GraduationCap className="w-5 h-5 text-[#A6766A]" />
-                    <span>Formação Acadêmica & Especializações</span>
+                  <h4 className="font-heading text-base font-bold text-[var(--text-main)] flex items-center gap-2 uppercase">
+                    <GraduationCap className="w-5 h-5 text-[#4A3221] dark:text-[#A0A5A9]" />
+                    <span>Formação Acadêmica & Prática Especializada</span>
                   </h4>
 
                   <div className="grid sm:grid-cols-2 gap-3.5">
@@ -240,7 +240,7 @@ export function About() {
                         className="p-4 rounded-xl border border-[var(--border-subtle)]/25 bg-[var(--bg-card)] shadow-2xs flex flex-col justify-between"
                       >
                         <div>
-                          <span className="font-heading text-xs uppercase tracking-wider text-[#A6766A] font-semibold block mb-1">
+                          <span className="font-heading text-xs uppercase tracking-wider text-[#4A3221] dark:text-[#A0A5A9] font-semibold block mb-1">
                             {item.institution}
                           </span>
                           <h5 className="font-heading text-sm font-bold text-[var(--text-main)] leading-snug mb-1.5">
@@ -258,10 +258,10 @@ export function About() {
             )}
           </div>
 
-          {/* Coluna da Foto Oficial da Dra. Sloane */}
+          {/* Coluna da Foto Oficial */}
           <div className="lg:col-span-5 order-1 lg:order-2 w-full flex justify-center lg:justify-end">
             <div ref={photoCardRef} className="w-full max-w-[360px] sm:max-w-[400px] will-change-transform">
-              <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] rounded-3xl overflow-hidden border-2 border-[#D4A396]/80 shadow-2xl hover-lift group bg-[#151A1F]">
+              <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] rounded-3xl overflow-hidden border-2 border-[#4E5357]/60 shadow-2xl hover-lift group bg-[#151A1F]">
                 {/* Feixe de luz suave */}
                 <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent z-20 pointer-events-none" />
                 <Image
@@ -274,16 +274,16 @@ export function About() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent pointer-events-none" />
 
-                {/* Badge Inferior com Nome e OAB */}
+                {/* Badge Inferior com Nome e Titularidade */}
                 <div className="absolute bottom-5 left-5 right-5 text-white z-10 pointer-events-none">
-                  <span className="text-[0.6875rem] uppercase tracking-widest text-[#D4A396] font-heading font-semibold block mb-1">
-                    Advogada Titular • {OFFICE_INFO.oab}
+                  <span className="text-[0.6875rem] uppercase tracking-widest text-[#D1D5D8] font-heading font-semibold block mb-1">
+                    Advogado Titular • {OFFICE_INFO.oab}
                   </span>
-                  <p className="font-heading text-xl sm:text-2xl font-bold leading-tight text-white drop-shadow-sm">
+                  <p className="font-heading text-xl sm:text-2xl font-bold leading-tight text-white drop-shadow-sm uppercase">
                     {LAWYER_PROFILE.name}
                   </p>
                   <p className="text-xs text-gray-200 font-body mt-1 leading-relaxed">
-                    Pós-graduada e MBA em Direito do Trabalho, Previdenciário e Acidentário
+                    Especialista em Direito e Processo do Trabalho e Previdenciário
                   </p>
                 </div>
               </div>
@@ -291,17 +291,17 @@ export function About() {
           </div>
         </div>
 
-        {/* Bloco 2: Missão, Visão e Valores — EXATAMENTE IGUAL AOS PILARES INSTITUCIONAIS */}
+        {/* Bloco 2: Missão, Visão e Valores */}
         <div className="pt-8 border-t border-[var(--border-subtle)]/30">
           <div className="relative flex items-center justify-between pb-4 border-b border-[var(--border-subtle)]/25 mb-8 text-[var(--text-muted)]">
             <div className="flex items-center gap-2.5">
-              <Compass className="w-4 h-4 text-[#A6766A]" />
+              <Compass className="w-4 h-4 text-[#4A3221] dark:text-[#A0A5A9]" />
               <span className="font-heading uppercase text-xs tracking-widest font-bold text-[var(--text-main)]">
                 Diretrizes & Princípios Norteadores
               </span>
             </div>
-            <span className="font-heading text-xs tracking-wider text-[var(--text-muted)] hidden sm:inline">
-              Compromisso Ético & Excelência Técnica
+            <span className="font-heading text-xs tracking-wider text-[var(--text-muted)] hidden sm:inline uppercase">
+              Compromisso Ético & Rigor Técnico
             </span>
           </div>
 
@@ -311,14 +311,14 @@ export function About() {
           >
             {/* 1. Nossa Missão */}
             <div className="about-pillar-item flex flex-col items-start px-0 md:px-6 pt-6 md:pt-0 first:pt-0 first:pl-0 will-change-transform">
-              <div className="flex items-center gap-2 mb-2 text-[#A6766A]">
-                <Compass className="w-5 h-5 text-[#A6766A]" />
-                <span className="font-heading text-xl sm:text-2xl font-bold tracking-tight text-[var(--text-main)]">
+              <div className="flex items-center gap-2 mb-2 text-[#4A3221] dark:text-[#A0A5A9]">
+                <Compass className="w-5 h-5 text-[#4A3221] dark:text-[#A0A5A9]" />
+                <span className="font-heading text-xl sm:text-2xl font-bold tracking-tight text-[var(--text-main)] uppercase">
                   Nossa Missão
                 </span>
               </div>
-              <h3 className="font-heading text-base font-semibold text-[var(--text-main)] mb-1.5">
-                Excelência Técnica & Empatia
+              <h3 className="font-heading text-base font-semibold text-[var(--text-main)] mb-1.5 uppercase">
+                Rigor Dogmático & Justiça Laboral
               </h3>
               <p className="font-body text-xs sm:text-sm text-[var(--text-muted)] leading-relaxed">
                 {OFFICE_INFO.pillars.mission}
@@ -327,14 +327,14 @@ export function About() {
 
             {/* 2. Nossa Visão */}
             <div className="about-pillar-item flex flex-col items-start px-0 md:px-6 pt-6 md:pt-0 first:pt-0 will-change-transform">
-              <div className="flex items-center gap-2 mb-2 text-[#A6766A]">
-                <Eye className="w-5 h-5 text-[#A6766A]" />
-                <span className="font-heading text-xl sm:text-2xl font-bold tracking-tight text-[var(--text-main)]">
+              <div className="flex items-center gap-2 mb-2 text-[#4A3221] dark:text-[#A0A5A9]">
+                <Eye className="w-5 h-5 text-[#4A3221] dark:text-[#A0A5A9]" />
+                <span className="font-heading text-xl sm:text-2xl font-bold tracking-tight text-[var(--text-main)] uppercase">
                   Nossa Visão
                 </span>
               </div>
-              <h3 className="font-heading text-base font-semibold text-[var(--text-main)] mb-1.5">
-                Referência em Advocacia Personalizada
+              <h3 className="font-heading text-base font-semibold text-[var(--text-main)] mb-1.5 uppercase">
+                Referência em Advocacia Trabalhista
               </h3>
               <p className="font-body text-xs sm:text-sm text-[var(--text-muted)] leading-relaxed">
                 {OFFICE_INFO.pillars.vision}
@@ -343,13 +343,13 @@ export function About() {
 
             {/* 3. Nossos Valores */}
             <div className="about-pillar-item flex flex-col items-start px-0 md:px-6 pt-6 md:pt-0 first:pt-0 will-change-transform">
-              <div className="flex items-center gap-2 mb-2 text-[#A6766A]">
-                <ShieldCheck className="w-5 h-5 text-[#A6766A]" />
-                <span className="font-heading text-xl sm:text-2xl font-bold tracking-tight text-[var(--text-main)]">
+              <div className="flex items-center gap-2 mb-2 text-[#4A3221] dark:text-[#A0A5A9]">
+                <ShieldCheck className="w-5 h-5 text-[#4A3221] dark:text-[#A0A5A9]" />
+                <span className="font-heading text-xl sm:text-2xl font-bold tracking-tight text-[var(--text-main)] uppercase">
                   Nossos Valores
                 </span>
               </div>
-              <h3 className="font-heading text-base font-semibold text-[var(--text-main)] mb-1.5">
+              <h3 className="font-heading text-base font-semibold text-[var(--text-main)] mb-1.5 uppercase">
                 Compromissos Fundamentais
               </h3>
               <p className="font-body text-xs sm:text-sm text-[var(--text-muted)] leading-relaxed">

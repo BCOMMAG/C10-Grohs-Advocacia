@@ -11,7 +11,7 @@ interface SectionItem {
 const SECTIONS: SectionItem[] = [
   { id: "inicio", num: "01", name: "Início" },
   { id: "pilares", num: "02", name: "Pilares" },
-  { id: "sobre", num: "03", name: "A Advogada" },
+  { id: "sobre", num: "03", name: "O Advogado" },
   { id: "atuacao", num: "04", name: "Especialidades" },
   { id: "educativo", num: "05", name: "Conteúdo" },
   { id: "avaliacoes", num: "06", name: "Avaliações" },
@@ -78,11 +78,11 @@ export function DesktopScrollIndicator() {
               <div
                 className={`absolute right-7 py-1 px-2.5 rounded-lg text-xs font-heading font-semibold whitespace-nowrap transition-all duration-300 pointer-events-none border ${
                   isHovered || (isActive && hoveredSection === null)
-                    ? "opacity-100 translate-x-0 bg-[#1A1D20]/95 text-white border-[#D4A396]/60 shadow-md scale-100"
+                    ? "opacity-100 translate-x-0 bg-[#121518]/95 text-white border-[#A0A5A9]/50 shadow-md scale-100"
                     : "opacity-0 translate-x-2 border-transparent scale-95"
                 }`}
               >
-                <span className="text-[#D4A396] mr-1.5 font-bold">{sec.num}</span>
+                <span className="text-[#A0A5A9] mr-1.5 font-bold">{sec.num}</span>
                 <span>{sec.name}</span>
               </div>
 
@@ -96,10 +96,10 @@ export function DesktopScrollIndicator() {
                 <span
                   className={`rounded-full transition-all duration-300 ${
                     isActive
-                      ? "w-3 h-3 bg-[#D4A396] ring-4 ring-[#D4A396]/30 shadow-[0_0_10px_rgba(212,163,150,0.8)] scale-110"
+                      ? "w-3 h-3 bg-[#4A3221] dark:bg-[#A0A5A9] ring-4 ring-[#4A3221]/30 dark:ring-[#A0A5A9]/30 shadow-md scale-110"
                       : isHovered
                       ? "w-2.5 h-2.5 bg-white/80 dark:bg-white/90 scale-105"
-                      : "w-1.5 h-1.5 bg-[var(--text-muted)]/50 group-hover:bg-[#D4A396]/80"
+                      : "w-1.5 h-1.5 bg-[var(--text-muted)]/50 group-hover:bg-[#4A3221]/80"
                   }`}
                 />
               </a>

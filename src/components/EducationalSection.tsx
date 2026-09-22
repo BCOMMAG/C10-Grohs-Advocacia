@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react";
 import { EDUCATIONAL_TOPICS, OFFICE_INFO } from "@/lib/data";
-import { BookOpen, Clock, ChevronRight, ShieldAlert, MessageSquare, ChevronDown } from "lucide-react";
+import { BookOpen, Clock, ChevronRight, ShieldAlert } from "lucide-react";
 import { WhatsAppIcon } from "@/components/SocialIcons";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -94,8 +94,8 @@ export function EducationalSection() {
   );
 
   const getWhatsAppMessageUrl = (topicTitle: string) => {
-    const text = `Olá, Dra. Sloane! Li o conteúdo educativo sobre "${topicTitle}" no seu site e gostaria de saber mais a respeito do meu caso.`;
-    return `https://wa.me/5517981217474?text=${encodeURIComponent(text)}`;
+    const text = `Olá, Dr. João Rodrigo! Li o conteúdo educativo sobre "${topicTitle}" no site e gostaria de esclarecer uma dúvida.`;
+    return `https://wa.me/${OFFICE_INFO.whatsappNumber}?text=${encodeURIComponent(text)}`;
   };
 
   return (
@@ -112,20 +112,20 @@ export function EducationalSection() {
         >
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <span className="bullet-indicator text-[#A6766A]" />
-              <span className="font-heading uppercase text-xs tracking-widest text-[#A6766A] font-bold">
+              <span className="bullet-indicator text-[#4A3221] dark:text-[#A0A5A9]" />
+              <span className="font-heading uppercase text-xs tracking-widest text-[#4A3221] dark:text-[#A0A5A9] font-bold">
                 03 / Esclarecimento à Sociedade (CFOAB)
               </span>
             </div>
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-[var(--text-main)] font-semibold">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-[var(--text-main)] font-semibold uppercase">
               Conteúdo Jurídico Educativo
             </h2>
           </div>
           <div className="max-w-md">
             <p className="font-body text-xs sm:text-sm text-[var(--text-muted)] leading-relaxed">
-              Esclarecimentos técnicos de utilidade pública sobre dúvidas e problemas jurídicos recorrentes no âmbito do Direito do Trabalho e Direito Civil.
+              Esclarecimentos técnicos de utilidade pública sobre direitos trabalhistas fundamentais e normas de proteção laboral.
             </p>
-            <span className="inline-flex items-center gap-1.5 text-[0.6875rem] font-heading text-[#A6766A] mt-2">
+            <span className="inline-flex items-center gap-1.5 text-[0.6875rem] font-heading text-[#4A3221] dark:text-[#A0A5A9] mt-2 uppercase">
               <ShieldAlert className="w-3.5 h-3.5" />
               <span>Espaço estritamente pedagógico • Provimento 205/2021 do CFOAB</span>
             </span>
@@ -133,7 +133,7 @@ export function EducationalSection() {
         </div>
 
         {/* ========================================================================= */}
-        {/* MODELO DESKTOP (MD+): LISTA LATERAL + PAINEL DE LEITURA COM BOTÃO CTA     */}
+        {/* MODELO DESKTOP (MD+): LISTA LATERAL + PAINEL DE LEITURA                  */}
         {/* ========================================================================= */}
         <div className="hidden md:grid lg:grid-cols-12 gap-8 items-start">
           {/* Navegador de Artigos à Esquerda */}
@@ -147,26 +147,26 @@ export function EducationalSection() {
                   onClick={() => setSelectedId(topic.id)}
                   className={`w-full p-4 sm:p-5 rounded-xl border text-left transition-all duration-300 cursor-pointer flex items-center justify-between ${
                     isSelected
-                      ? "bg-[var(--bg-secondary)] border-[#A6766A] shadow-xs"
-                      : "bg-[var(--bg-card)] border-[var(--border-subtle)]/30 hover:border-[#A6766A]/60"
+                      ? "bg-[var(--bg-secondary)] border-[#4A3221] dark:border-[#A0A5A9] shadow-xs"
+                      : "bg-[var(--bg-card)] border-[var(--border-subtle)]/30 hover:border-[#4A3221]/60"
                   }`}
                 >
                   <div className="space-y-1 min-w-0 flex-1 pr-3">
                     <div className="flex items-center gap-2 text-xs font-heading">
-                      <span className="text-[#A6766A] font-bold">{topic.number}.</span>
+                      <span className="text-[#4A3221] dark:text-[#A0A5A9] font-bold">{topic.number}.</span>
                       <span className="text-[var(--text-muted)] uppercase tracking-wider">{topic.category}</span>
                     </div>
                     <h3 className="font-heading text-sm sm:text-base font-bold text-[var(--text-main)] leading-snug break-words">
                       {topic.title}
                     </h3>
                     <div className="flex items-center gap-1.5 text-[0.6875rem] text-[var(--text-muted)] font-body pt-0.5">
-                      <Clock className="w-3 h-3 text-[#A6766A]" />
+                      <Clock className="w-3 h-3 text-[#4A3221] dark:text-[#A0A5A9]" />
                       <span>{topic.readTime}</span>
                     </div>
                   </div>
                   <ChevronRight
                     className={`w-4 h-4 flex-shrink-0 transition-transform ${
-                      isSelected ? "text-[#A6766A] translate-x-1" : "text-[var(--border-subtle)]"
+                      isSelected ? "text-[#4A3221] dark:text-[#A0A5A9] translate-x-1" : "text-[var(--border-subtle)]"
                     }`}
                   />
                 </button>
@@ -174,15 +174,15 @@ export function EducationalSection() {
             })}
           </div>
 
-          {/* Painel de Leitura Pedagógica com Botão Personalizado de WhatsApp */}
+          {/* Painel de Leitura Pedagógica com Botão de WhatsApp */}
           <div ref={rightColRef} className="lg:col-span-7 p-6 sm:p-10 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/40 shadow-xs space-y-6 will-change-transform">
             <div className="flex items-center justify-between border-b border-[var(--border-subtle)]/25 pb-4">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--bg-secondary)] text-[#A6766A] font-heading text-xs font-bold uppercase tracking-wider">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--bg-secondary)] text-[#4A3221] dark:text-[#A0A5A9] font-heading text-xs font-bold uppercase tracking-wider">
                 <BookOpen className="w-3.5 h-3.5" />
                 <span>{activeTopic.category}</span>
               </span>
               <span className="text-xs font-body text-[var(--text-muted)] flex items-center gap-1">
-                <Clock className="w-3.5 h-3.5 text-[#A6766A]" />
+                <Clock className="w-3.5 h-3.5 text-[#4A3221] dark:text-[#A0A5A9]" />
                 {activeTopic.readTime}
               </span>
             </div>
@@ -191,7 +191,7 @@ export function EducationalSection() {
               <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[var(--text-main)] leading-tight">
                 {activeTopic.title}
               </h3>
-              <p className="font-body text-xs sm:text-sm text-[#A6766A] italic">
+              <p className="font-body text-xs sm:text-sm text-[#4A3221] dark:text-[#A0A5A9] italic">
                 {activeTopic.summary}
               </p>
             </div>
@@ -202,14 +202,14 @@ export function EducationalSection() {
               ))}
             </div>
 
-            {/* BOTÃO PERSONALIZADO NO FINAL DE CADA CONTEÚDO (Item 6) */}
+            {/* BOTÃO PERSONALIZADO NO FINAL DE CADA CONTEÚDO */}
             <div className="pt-5 border-t border-[var(--border-subtle)]/30 flex flex-col sm:flex-row items-center justify-between gap-4 bg-[var(--bg-secondary)]/40 p-4 rounded-xl">
               <div className="text-left">
-                <span className="font-heading text-xs font-bold text-[var(--text-main)] block">
-                  Ficou com alguma dúvida específica sobre este tema?
+                <span className="font-heading text-xs font-bold text-[var(--text-main)] block uppercase">
+                  Deseja entender como esse direito se aplica ao seu caso?
                 </span>
                 <span className="text-[0.6875rem] font-body text-[var(--text-muted)]">
-                  Converse diretamente com a Dra. Sloane Ferreira de Andrade.
+                  Converse diretamente com o Dr. João Rodrigo Pimentel Grohs.
                 </span>
               </div>
 
@@ -220,13 +220,13 @@ export function EducationalSection() {
                 className="btn-pill bg-[#25D366] hover:bg-[#20ba59] hover:scale-105 text-white py-2.5 px-5 text-xs font-semibold gap-2 shadow-sm whitespace-nowrap transition-all flex items-center flex-shrink-0 cursor-pointer"
               >
                 <WhatsAppIcon className="w-4 h-4 text-white" />
-                <span>Gostaria de saber mais</span>
+                <span>Conversar no WhatsApp</span>
               </a>
             </div>
 
             <div className="pt-4 border-t border-[var(--border-subtle)]/25 bg-[var(--bg-secondary)]/30 -mx-6 -mb-6 sm:-mx-10 sm:-mb-10 p-4 sm:p-6 rounded-b-2xl">
               <p className="text-[0.6875rem] font-body text-[var(--text-muted)] flex items-center gap-2">
-                <ShieldAlert className="w-4 h-4 text-[#A6766A] flex-shrink-0" />
+                <ShieldAlert className="w-4 h-4 text-[#4A3221] dark:text-[#A0A5A9] flex-shrink-0" />
                 <span>{activeTopic.oabDisclaimer}</span>
               </p>
             </div>
@@ -234,7 +234,7 @@ export function EducationalSection() {
         </div>
 
         {/* ========================================================================= */}
-        {/* MODELO MOBILE (< MD): FORMATO RESUMIDO SEM CORTAR TÍTULOS E INFORMAÇÕES   */}
+        {/* MODELO MOBILE (< MD)                                                     */}
         {/* ========================================================================= */}
         <div className="block md:hidden space-y-3">
           {EDUCATIONAL_TOPICS.map((topic) => {
@@ -244,20 +244,19 @@ export function EducationalSection() {
               <div
                 key={topic.id}
                 className={`rounded-2xl border transition-all duration-300 bg-[var(--bg-card)] overflow-hidden ${
-                  isExpanded ? "border-[#A6766A] shadow-md" : "border-[var(--border-subtle)]/35 shadow-2xs"
+                  isExpanded ? "border-[#4A3221] dark:border-[#A0A5A9] shadow-md" : "border-[var(--border-subtle)]/35 shadow-2xs"
                 }`}
               >
-                {/* Linha Resumida Sem Truncate: Título completo com quebra natural */}
                 <div
                   onClick={() => toggleMobileTopic(topic.id)}
                   className="p-3.5 flex items-start justify-between gap-3 cursor-pointer select-none"
                 >
                   <div className="flex items-start gap-2.5 min-w-0 flex-1">
-                    <span className="font-heading text-sm font-bold text-[#A6766A] flex-shrink-0 mt-0.5">
+                    <span className="font-heading text-sm font-bold text-[#4A3221] dark:text-[#A0A5A9] flex-shrink-0 mt-0.5">
                       {topic.number}
                     </span>
                     <div className="min-w-0 flex-1">
-                      <span className="text-[0.6875rem] font-heading uppercase tracking-wider text-[#A6766A] block break-words">
+                      <span className="text-[0.6875rem] font-heading uppercase tracking-wider text-[#4A3221] dark:text-[#A0A5A9] block break-words">
                         {topic.category}
                       </span>
                       <h3 className="font-heading text-sm font-bold text-[var(--text-main)] leading-snug break-words">
@@ -270,15 +269,15 @@ export function EducationalSection() {
                     type="button"
                     className={`inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full text-[0.6875rem] font-heading font-semibold transition-all flex-shrink-0 self-center ${
                       isExpanded
-                        ? "bg-[#A6766A] text-white"
-                        : "bg-[var(--bg-secondary)] text-[#A6766A] border border-[#A6766A]/30"
+                        ? "bg-[#4A3221] text-white"
+                        : "bg-[var(--bg-secondary)] text-[#4A3221] dark:text-[#A0A5A9] border border-[var(--border-subtle)]"
                     }`}
                     aria-expanded={isExpanded}
                   >
-                    <span>{isExpanded ? "Fechar" : "Saber mais"}</span>
-                    <ChevronDown
+                    <span>{isExpanded ? "Fechar" : "Ler artigo"}</span>
+                    <ChevronRight
                       className={`w-3 h-3 transition-transform duration-300 ${
-                        isExpanded ? "rotate-180" : ""
+                        isExpanded ? "rotate-90" : ""
                       }`}
                     />
                   </button>
@@ -287,7 +286,7 @@ export function EducationalSection() {
                 {/* Conteúdo Expansível no Mobile */}
                 {isExpanded && (
                   <div className="px-4 pb-4 pt-1 border-t border-[var(--border-subtle)]/25 space-y-3 animate-fade-in-down">
-                    <p className="font-body text-xs text-[#A6766A] italic pt-2">
+                    <p className="font-body text-xs text-[#4A3221] dark:text-[#A0A5A9] italic pt-2">
                       {topic.summary}
                     </p>
 
@@ -306,7 +305,7 @@ export function EducationalSection() {
                         className="btn-pill bg-[#25D366] hover:bg-[#20ba59] text-white py-2.5 px-4 text-xs font-semibold gap-2 shadow-xs justify-center flex items-center"
                       >
                         <WhatsAppIcon className="w-4 h-4 text-white" />
-                        <span>Gostaria de saber mais</span>
+                        <span>Conversar no WhatsApp</span>
                       </a>
                     </div>
                   </div>

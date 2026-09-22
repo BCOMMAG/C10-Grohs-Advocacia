@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect } from "react";
 import { OFFICE_INFO } from "@/lib/data";
@@ -36,7 +36,7 @@ export function FloatingWhatsApp() {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 group flex items-center">
-      {/* Balão de mensagem automático (aparece a cada 30s por 10s ou no hover no desktop) */}
+      {/* Balão de mensagem automático */}
       <div
         className={`mr-3 px-4 py-2 rounded-2xl bg-[var(--bg-card)] text-[var(--text-main)] text-xs sm:text-sm font-heading font-medium border border-[var(--border-subtle)]/40 shadow-xl transition-all duration-500 flex items-center gap-2 pointer-events-none ${
           showBubble
@@ -45,14 +45,14 @@ export function FloatingWhatsApp() {
         }`}
       >
         <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping flex-shrink-0" />
-        <span>Conversar com a Dra. Sloane</span>
+        <span className="uppercase">Falar com o Dr. João Rodrigo</span>
       </div>
 
       <a
         href={OFFICE_INFO.whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Atendimento direto via WhatsApp com a Dra. Sloane Andrade"
+        aria-label="Atendimento direto via WhatsApp com o Dr. João Rodrigo Grohs"
         className="w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110 relative"
       >
         <WhatsAppIcon className="w-7 h-7 text-white" />

@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { Philosopher, Mulish } from "next/font/google";
+import { Oswald, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { getLegalServiceSchema } from "@/lib/schema";
 
-const philosopher = Philosopher({
+const oswald = Oswald({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-heading",
   display: "swap",
 });
 
-const mulish = Mulish({
+const sourceSerif = Source_Serif_4({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-body",
@@ -20,51 +20,53 @@ const mulish = Mulish({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sloaneandrade-adv.vercel.app"),
+  metadataBase: new URL("https://grohs.adv.br"),
   title: {
-    default: "Sloane Andrade Advocacia | Guaíra - SP",
-    template: "%s | Sloane Andrade Advocacia",
+    default: "Grohs Sociedade de Advogados | Advocacia Trabalhista em Curitiba - PR",
+    template: "%s | Grohs Sociedade de Advogados",
   },
   description:
-    "Escritório de advocacia em Guaíra/SP especializado em Direito do Trabalho, Previdenciário/Acidentário, Direito Civil e Família. OAB/SP 463.336. Mais de 10 anos de experiência com atendimento humanizado.",
+    "Grohs Sociedade de Advogados - Advocacia trabalhista e previdenciária exercida por profissionais com especialização e 13 anos de experiência para um trabalho de excelência. Dr. João Rodrigo Pimentel Grohs. Curitiba - PR.",
   keywords: [
-    "advogada guaíra sp",
-    "sloane andrade advocacia",
-    "advogado trabalhista guaíra",
-    "acidente de trabalho inss guaíra",
-    "divórcio e pensão alimentícia guaíra",
-    "inventário e partilha de bens sp",
-    "direito civil barretos guaíra",
+    "advogado trabalhista curitiba",
+    "grohs advocacia",
+    "grohs sociedade de advogados",
+    "joão rodrigo pimentel grohs",
+    "rescisão trabalhista curitiba",
+    "horas extras curitiba",
+    "pejotização vínculo clt",
+    "acidente de trabalho curitiba pr",
+    "advocacia trabalhista bom retiro curitiba",
   ],
-  authors: [{ name: "Dra. Sloane Ferreira de Andrade" }],
-  creator: "Dra. Sloane Ferreira de Andrade",
-  publisher: "Sloane Andrade Advocacia",
+  authors: [{ name: "João Rodrigo Pimentel Grohs" }],
+  creator: "Grohs Sociedade de Advogados",
+  publisher: "Grohs Sociedade de Advogados",
   alternates: {
-    canonical: "https://sloaneandrade-adv.vercel.app",
+    canonical: "https://grohs.adv.br",
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://sloaneandrade-adv.vercel.app",
-    title: "Sloane Andrade Advocacia | Guaíra - SP",
+    url: "https://grohs.adv.br",
+    title: "Grohs Sociedade de Advogados | Advocacia Trabalhista em Curitiba - PR",
     description:
-      "Segurança jurídica e atuação estratégica na defesa dos seus direitos e do seu trabalho. Mais de 10 anos de experiência e atendimento humanizado.",
-    siteName: "Sloane Andrade Advocacia",
+      "Advocacia trabalhista exercida por profissionais com especialização e ampla experiência para um trabalho de excelência. Dr. João Rodrigo Pimentel Grohs.",
+    siteName: "Grohs Sociedade de Advogados",
     images: [
       {
-        url: "/logo_semfundo_escritapreta_paramodoclaro.png",
+        url: "/Logosemfundo_escritaescura_usarnomodoclaro.png",
         width: 1200,
         height: 630,
-        alt: "Sloane Andrade Advocacia",
+        alt: "Grohs Sociedade de Advogados",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sloane Andrade Advocacia | Guaíra - SP",
+    title: "Grohs Sociedade de Advogados | Advocacia Trabalhista em Curitiba - PR",
     description:
-      "Segurança jurídica e atuação estratégica na defesa dos seus direitos e do seu trabalho. Dra. Sloane Ferreira de Andrade OAB/SP 463.336.",
-    images: ["/logo_semfundo_escritapreta_paramodoclaro.png"],
+      "Advocacia trabalhista exercida por profissionais com especialização e ampla experiência para um trabalho de excelência. Dr. João Rodrigo Pimentel Grohs.",
+    images: ["/Logosemfundo_escritaescura_usarnomodoclaro.png"],
   },
   robots: {
     index: true,
@@ -85,8 +87,7 @@ export const metadata: Metadata = {
       { url: "/favicon_512x512.png", sizes: "512x512", type: "image/png" },
     ],
     apple: [
-      { url: "/favicon_180x180.png", sizes: "180x180", type: "image/png" },
-      { url: "/favicon-apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/favicon_apple-touch-icon180x180.png", sizes: "180x180", type: "image/png" },
     ],
     shortcut: "/favicon_32x32.png",
   },
@@ -102,7 +103,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${philosopher.variable} ${mulish.variable}`}
+      className={`${oswald.variable} ${sourceSerif.variable}`}
       suppressHydrationWarning
     >
       <head>

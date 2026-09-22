@@ -70,30 +70,30 @@ export function ReviewsSection() {
         >
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <span className="bullet-indicator text-[#A6766A]" />
-              <span className="font-heading uppercase text-xs tracking-widest text-[#A6766A] font-bold">
-                04 / Reconhecimento Público
+              <span className="bullet-indicator text-[#4A3221] dark:text-[#A0A5A9]" />
+              <span className="font-heading uppercase text-xs tracking-widest text-[#4A3221] dark:text-[#A0A5A9] font-bold">
+                04 / Reconhecimento & Confiança
               </span>
             </div>
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-[var(--text-main)] font-semibold">
-              Avaliações no Google Reviews
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-[var(--text-main)] font-semibold uppercase">
+              Avaliações no Google
             </h2>
           </div>
 
           <div className="flex items-center gap-4 p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/30 shadow-2xs">
-            <div className="text-right">
+            <div>
               <div className="flex items-center gap-1 text-amber-400">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-amber-400" />
                 ))}
               </div>
               <span className="font-heading text-xs uppercase tracking-wider text-[var(--text-muted)] block mt-0.5">
-                Avaliação 5.0 Estrelas
+                Avaliações Espontâneas Verificadas
               </span>
             </div>
             <div className="h-8 w-[1px] bg-[var(--border-subtle)]/30" />
-            <div className="font-heading text-xl font-bold text-[var(--text-main)]">
-              +70 <span className="text-xs text-[var(--text-muted)] font-normal">opiniões públicas</span>
+            <div className="font-heading text-sm font-bold text-[var(--text-main)] uppercase">
+              Google <span className="text-xs text-[var(--text-muted)] font-normal block normal-case">Reviews</span>
             </div>
           </div>
         </div>
@@ -105,7 +105,7 @@ export function ReviewsSection() {
           {duplicatedReviews.map((rev, idx) => (
             <div
               key={`${rev.id}-${idx}`}
-              className="w-[320px] sm:w-[380px] p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/35 shadow-xs flex flex-col justify-between flex-shrink-0 hover:border-[#A6766A] transition-colors"
+              className="w-[320px] sm:w-[380px] p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/35 shadow-xs flex flex-col justify-between flex-shrink-0 hover:border-[#4A3221] dark:hover:border-[#A0A5A9] transition-colors"
             >
               <div>
                 <div className="flex items-center justify-between mb-3">
@@ -125,9 +125,9 @@ export function ReviewsSection() {
               </div>
 
               <div className="pt-3 border-t border-[var(--border-subtle)]/20 flex items-center justify-between text-xs font-heading">
-                <span className="font-bold text-[var(--text-main)]">{rev.author}</span>
+                <span className="font-bold text-[var(--text-main)] uppercase">{rev.author}</span>
                 <span className="text-[0.6875rem] text-[var(--text-muted)] flex items-center gap-1">
-                  <MessageSquareQuote className="w-3.5 h-3.5 text-[#A6766A]" />
+                  <MessageSquareQuote className="w-3.5 h-3.5 text-[#4A3221] dark:text-[#A0A5A9]" />
                   <span>{rev.source}</span>
                 </span>
               </div>
@@ -138,7 +138,7 @@ export function ReviewsSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
         <p className="text-[0.6875rem] text-[var(--text-muted)] text-center font-body">
-          * Avaliações espontâneas e públicas registradas na plataforma Google Maps / Google Reviews, respeitando a sobriedade exigida pelo Código de Ética e Disciplina da OAB.
+          * Avaliações espontâneas e públicas registradas na plataforma Google Maps / Google Reviews, respeitando a sobriedade exigida pelo Código de Ética e Disciplina da OAB e Provimento 205/2021.
         </p>
       </div>
     </section>

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
@@ -60,15 +60,15 @@ export function Navbar() {
 
   // Escolhe a logo apropriada de acordo com o fundo/tema
   const currentLogo = !isScrolled
-    ? "/logo_semfundo_escritabranca_paramodoescuro.png"
+    ? "/Logosemfundo_escritaescura_usarnomodoescuro.png"
     : theme === "dark"
-    ? "/logo_semfundo_escritabranca_paramodoescuro.png"
-    : "/logo_semfundo_escritapreta_paramodoclaro.png";
+    ? "/Logosemfundo_escritaescura_usarnomodoescuro.png"
+    : "/Logosemfundo_escritaescura_usarnomodoclaro.png";
 
   const drawerLogo =
     theme === "dark"
-      ? "/logo_semfundo_escritabranca_paramodoescuro.png"
-      : "/logo_semfundo_escritapreta_paramodoclaro.png";
+      ? "/Logosemfundo_escritaescura_usarnomodoescuro.png"
+      : "/Logosemfundo_escritaescura_usarnomodoclaro.png";
 
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
@@ -84,7 +84,7 @@ export function Navbar() {
           <div className="relative h-11 sm:h-13 w-40 sm:w-48 transition-transform duration-300 group-hover:scale-105">
             <Image
               src={currentLogo}
-              alt="Sloane Andrade Advocacia"
+              alt="Grohs Sociedade de Advogados"
               fill
               priority
               className="object-contain object-left drop-shadow-md"
@@ -114,7 +114,7 @@ export function Navbar() {
                 <div className="relative h-12 w-60 xl:w-68 transition-transform duration-300 group-hover:scale-105">
                   <Image
                     src={currentLogo}
-                    alt="Sloane Andrade Advocacia"
+                    alt="Grohs Sociedade de Advogados"
                     fill
                     priority
                     className="object-contain object-left drop-shadow-md"
@@ -124,7 +124,7 @@ export function Navbar() {
               </Link>
             </div>
 
-            {/* Menu Desktop Enxuto com 4 Itens Principais + Submenus */}
+            {/* Menu Desktop */}
             <nav
               className={`hidden lg:flex items-center gap-7 xl:gap-9 text-[0.875rem] font-heading uppercase tracking-wider transition-colors duration-300 ${
                 !isScrolled ? "text-white/95" : "text-[var(--text-main)]"
@@ -164,14 +164,14 @@ export function Navbar() {
                       className="p-3 rounded-xl hover:bg-[var(--bg-secondary)]/80 flex items-center justify-between group transition-colors"
                     >
                       <div>
-                        <span className="font-heading font-bold text-sm block group-hover:text-[#A6766A]">
-                          A Advogada
+                        <span className="font-heading font-bold text-sm block group-hover:text-[var(--accent)]">
+                          O Advogado
                         </span>
                         <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">
-                          Trajetória, MBA e histórico profissional
+                          Dr. João Rodrigo Grohs • 13 Anos
                         </span>
                       </div>
-                      <ArrowUpRight className="w-3.5 h-3.5 text-[var(--text-muted)] group-hover:text-[#A6766A] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      <ArrowUpRight className="w-3.5 h-3.5 text-[var(--text-muted)] group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </Link>
 
                     <Link
@@ -180,14 +180,14 @@ export function Navbar() {
                       className="p-3 rounded-xl hover:bg-[var(--bg-secondary)]/80 flex items-center justify-between group transition-colors"
                     >
                       <div>
-                        <span className="font-heading font-bold text-sm block group-hover:text-[#A6766A]">
-                          Como Funciona
+                        <span className="font-heading font-bold text-sm block group-hover:text-[var(--accent)]">
+                          Como Atuamos
                         </span>
                         <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">
-                          Passo a passo do nosso atendimento
+                          Método de trabalho e estratégia
                         </span>
                       </div>
-                      <ArrowUpRight className="w-3.5 h-3.5 text-[var(--text-muted)] group-hover:text-[#A6766A] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      <ArrowUpRight className="w-3.5 h-3.5 text-[var(--text-muted)] group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </Link>
 
                     <Link
@@ -196,14 +196,14 @@ export function Navbar() {
                       className="p-3 rounded-xl hover:bg-[var(--bg-secondary)]/80 flex items-center justify-between group transition-colors"
                     >
                       <div>
-                        <span className="font-heading font-bold text-sm block group-hover:text-[#A6766A]">
+                        <span className="font-heading font-bold text-sm block group-hover:text-[var(--accent)]">
                           Avaliações (Google)
                         </span>
                         <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">
-                          Nota 5.0 estrelas (+70 opiniões)
+                          Opiniões e avaliações de clientes
                         </span>
                       </div>
-                      <ArrowUpRight className="w-3.5 h-3.5 text-[var(--text-muted)] group-hover:text-[#A6766A] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      <ArrowUpRight className="w-3.5 h-3.5 text-[var(--text-muted)] group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </Link>
                   </div>
                 )}
@@ -239,14 +239,14 @@ export function Navbar() {
                       className="p-3 rounded-xl hover:bg-[var(--bg-secondary)]/80 flex items-center justify-between group transition-colors"
                     >
                       <div>
-                        <span className="font-heading font-bold text-sm block group-hover:text-[#A6766A]">
+                        <span className="font-heading font-bold text-sm block group-hover:text-[var(--accent)]">
                           Áreas de Atuação
                         </span>
                         <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">
-                          Trabalhista, Previdenciário, Família e Cível
+                          Direito do Trabalho & Previdenciário
                         </span>
                       </div>
-                      <ArrowUpRight className="w-3.5 h-3.5 text-[var(--text-muted)] group-hover:text-[#A6766A] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      <ArrowUpRight className="w-3.5 h-3.5 text-[var(--text-muted)] group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </Link>
 
                     <Link
@@ -255,14 +255,14 @@ export function Navbar() {
                       className="p-3 rounded-xl hover:bg-[var(--bg-secondary)]/80 flex items-center justify-between group transition-colors"
                     >
                       <div>
-                        <span className="font-heading font-bold text-sm block group-hover:text-[#A6766A]">
+                        <span className="font-heading font-bold text-sm block group-hover:text-[var(--accent)]">
                           Conteúdo Educativo
                         </span>
                         <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">
                           Artigos e orientações éticas CFOAB
                         </span>
                       </div>
-                      <ArrowUpRight className="w-3.5 h-3.5 text-[var(--text-muted)] group-hover:text-[#A6766A] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      <ArrowUpRight className="w-3.5 h-3.5 text-[var(--text-muted)] group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </Link>
 
                     <Link
@@ -271,14 +271,14 @@ export function Navbar() {
                       className="p-3 rounded-xl hover:bg-[var(--bg-secondary)]/80 flex items-center justify-between group transition-colors"
                     >
                       <div>
-                        <span className="font-heading font-bold text-sm block group-hover:text-[#A6766A]">
+                        <span className="font-heading font-bold text-sm block group-hover:text-[var(--accent)]">
                           Dúvidas Frequentes (FAQ)
                         </span>
                         <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">
-                          Respostas diretas para as dúvidas comuns
+                          Respostas diretas para dúvidas trabalhistas
                         </span>
                       </div>
-                      <ArrowUpRight className="w-3.5 h-3.5 text-[var(--text-muted)] group-hover:text-[#A6766A] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      <ArrowUpRight className="w-3.5 h-3.5 text-[var(--text-muted)] group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </Link>
                   </div>
                 )}
@@ -321,7 +321,7 @@ export function Navbar() {
         </div>
       </header>
 
-      {/* 3. MENU MOBILE DRAWER (Off-canvas enxuto com Accordions) */}
+      {/* 3. MENU MOBILE DRAWER */}
       <div
         className={`lg:hidden fixed inset-0 z-50 transition-all duration-300 ${
           mobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
@@ -341,7 +341,7 @@ export function Navbar() {
               <div className="relative h-10 w-40">
                 <Image
                   src={drawerLogo}
-                  alt="Sloane Andrade Advocacia"
+                  alt="Grohs Sociedade de Advogados"
                   fill
                   className="object-contain object-left"
                   sizes="160px"
@@ -357,14 +357,14 @@ export function Navbar() {
               </button>
             </div>
 
-            <div className="my-4 flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#D4A396]/40 bg-[var(--bg-secondary)]/70 text-xs font-heading text-[#A6766A]">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#A6766A]" />
-              <span>{OFFICE_INFO.oab} • OAB/SP</span>
+            <div className="my-4 flex items-center gap-2 px-3 py-1.5 rounded-full border border-[var(--border-subtle)]/40 bg-[var(--bg-secondary)]/70 text-xs font-heading text-[var(--accent)]">
+              <ShieldCheck className="w-3.5 h-3.5 text-[var(--accent)]" />
+              <span>{OFFICE_INFO.oab}</span>
             </div>
 
             {/* Navegação Mobile Enxuta com Submenus */}
             <nav className="flex flex-col space-y-2 font-heading text-base font-medium text-[var(--text-main)] pt-2">
-              <Link href="#inicio" onClick={closeMobileMenu} className="py-2 hover:text-[#A6766A] border-b border-[var(--border-subtle)]/15">
+              <Link href="#inicio" onClick={closeMobileMenu} className="py-2 hover:text-[var(--accent)] border-b border-[var(--border-subtle)]/15">
                 Início
               </Link>
 
@@ -373,21 +373,21 @@ export function Navbar() {
                 <button
                   type="button"
                   onClick={() => setMobileOfficeOpen(!mobileOfficeOpen)}
-                  className="w-full flex items-center justify-between py-2 text-left hover:text-[#A6766A] cursor-pointer"
+                  className="w-full flex items-center justify-between py-2 text-left hover:text-[var(--accent)] cursor-pointer"
                 >
                   <span>O Escritório</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileOfficeOpen ? "rotate-180 text-[#A6766A]" : ""}`} />
+                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileOfficeOpen ? "rotate-180 text-[var(--accent)]" : ""}`} />
                 </button>
                 {mobileOfficeOpen && (
                   <div className="pl-4 pb-2 space-y-2 text-sm text-[var(--text-muted)] font-body animate-fade-in-down">
-                    <Link href="#sobre" onClick={closeMobileMenu} className="block py-1 hover:text-[#A6766A]">
-                      • A Advogada & Formação
+                    <Link href="#sobre" onClick={closeMobileMenu} className="block py-1 hover:text-[var(--accent)]">
+                      • Dr. João Rodrigo Grohs (13 Anos)
                     </Link>
-                    <Link href="#como-atuamos" onClick={closeMobileMenu} className="block py-1 hover:text-[#A6766A]">
-                      • Como Funciona o Atendimento
+                    <Link href="#como-atuamos" onClick={closeMobileMenu} className="block py-1 hover:text-[var(--accent)]">
+                      • Como Atuamos
                     </Link>
-                    <Link href="#avaliacoes" onClick={closeMobileMenu} className="block py-1 hover:text-[#A6766A]">
-                      • Avaliações do Google (+70)
+                    <Link href="#avaliacoes" onClick={closeMobileMenu} className="block py-1 hover:text-[var(--accent)]">
+                      • Avaliações no Google
                     </Link>
                   </div>
                 )}
@@ -398,31 +398,31 @@ export function Navbar() {
                 <button
                   type="button"
                   onClick={() => setMobileAreasOpen(!mobileAreasOpen)}
-                  className="w-full flex items-center justify-between py-2 text-left hover:text-[#A6766A] cursor-pointer"
+                  className="w-full flex items-center justify-between py-2 text-left hover:text-[var(--accent)] cursor-pointer"
                 >
                   <span>Atuação & Conteúdo</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileAreasOpen ? "rotate-180 text-[#A6766A]" : ""}`} />
+                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileAreasOpen ? "rotate-180 text-[var(--accent)]" : ""}`} />
                 </button>
                 {mobileAreasOpen && (
                   <div className="pl-4 pb-2 space-y-2 text-sm text-[var(--text-muted)] font-body animate-fade-in-down">
-                    <Link href="#atuacao" onClick={closeMobileMenu} className="block py-1 hover:text-[#A6766A]">
+                    <Link href="#atuacao" onClick={closeMobileMenu} className="block py-1 hover:text-[var(--accent)]">
                       • Áreas de Atuação
                     </Link>
-                    <Link href="#educativo" onClick={closeMobileMenu} className="block py-1 hover:text-[#A6766A]">
+                    <Link href="#educativo" onClick={closeMobileMenu} className="block py-1 hover:text-[var(--accent)]">
                       • Conteúdo Jurídico (CFOAB)
                     </Link>
-                    <Link href="#faq" onClick={closeMobileMenu} className="block py-1 hover:text-[#A6766A]">
+                    <Link href="#faq" onClick={closeMobileMenu} className="block py-1 hover:text-[var(--accent)]">
                       • Perguntas Frequentes (FAQ)
                     </Link>
                   </div>
                 )}
               </div>
 
-              <Link href="#contato" onClick={closeMobileMenu} className="py-2 hover:text-[#A6766A] border-b border-[var(--border-subtle)]/15">
+              <Link href="#contato" onClick={closeMobileMenu} className="py-2 hover:text-[var(--accent)] border-b border-[var(--border-subtle)]/15">
                 Contato & Localização
               </Link>
               
-              <Link href="/links" onClick={closeMobileMenu} className="py-2 text-[#A6766A] font-semibold">
+              <Link href="/links" onClick={closeMobileMenu} className="py-2 text-[var(--accent)] font-semibold">
                 Link-in-Bio (/links)
               </Link>
             </nav>

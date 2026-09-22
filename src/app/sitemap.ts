@@ -1,7 +1,7 @@
-﻿import { MetadataRoute } from 'next';
+import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://sloaneandrade-adv.vercel.app';
+  const baseUrl = 'https://grohs.adv.br';
   const lastModified = new Date();
 
   return [
