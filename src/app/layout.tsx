@@ -54,10 +54,10 @@ export const metadata: Metadata = {
     siteName: "Grohs Sociedade de Advogados",
     images: [
       {
-        url: "/Logosemfundo_escritaescura_usarnomodoclaro.png",
+        url: "/og-image_1_optimized_300.jpeg",
         width: 1200,
         height: 630,
-        alt: "Grohs Sociedade de Advogados",
+        alt: "Grohs Sociedade de Advogados - Advocacia Trabalhista Curitiba",
       },
     ],
   },
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title: "Grohs Sociedade de Advogados | Advocacia Trabalhista em Curitiba - PR",
     description:
       "Advocacia trabalhista exercida por profissionais com especialização e ampla experiência para um trabalho de excelência. Dr. João Rodrigo Pimentel Grohs.",
-    images: ["/Logosemfundo_escritaescura_usarnomodoclaro.png"],
+    images: ["/og-image_1_optimized_300.jpeg"],
   },
   robots: {
     index: true,
