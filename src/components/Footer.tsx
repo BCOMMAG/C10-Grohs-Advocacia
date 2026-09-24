@@ -50,7 +50,7 @@ export function Footer() {
                 <Link href="#inicio" className="hover:text-white transition-colors">Início</Link>
               </li>
               <li>
-                <Link href="#sobre" className="hover:text-white transition-colors">O Advogado</Link>
+                <Link href="#sobre" className="hover:text-white transition-colors">O Escritório</Link>
               </li>
               <li>
                 <Link href="#avaliacoes" className="hover:text-white transition-colors">Avaliações (Google)</Link>
@@ -94,7 +94,7 @@ export function Footer() {
                 href={OFFICE_INFO.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn do Dr. João Rodrigo Grohs"
+                aria-label="LinkedIn da Grohs Sociedade de Advogados"
                 className="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#4A3221] flex items-center justify-center text-white transition-colors"
               >
                 <LinkedinIcon className="w-4 h-4" />
@@ -103,7 +103,7 @@ export function Footer() {
                 href={OFFICE_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="WhatsApp do Dr. João Rodrigo Grohs"
+                aria-label="WhatsApp da Grohs Sociedade de Advogados"
                 className="w-9 h-9 rounded-xl bg-[#4A3221] hover:bg-[#372417] flex items-center justify-center text-white transition-colors"
               >
                 <MessageSquare className="w-4 h-4 fill-white" />

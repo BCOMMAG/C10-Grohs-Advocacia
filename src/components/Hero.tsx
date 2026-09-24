@@ -129,14 +129,14 @@ export function Hero() {
               className="btn-pill bg-[#4A3221] hover:bg-[#372417] hover:scale-[1.02] text-white border border-[#A0A5A9]/30 gap-2.5 py-3 sm:py-3.5 px-6 sm:px-7 text-xs sm:text-sm font-semibold tracking-wide shadow-xl group transition-all text-center justify-center flex items-center cursor-pointer"
             >
               <MessageSquare className="w-4 h-4 text-white group-hover:scale-110 transition-transform" />
-              <span>Falar com o Dr. João Rodrigo</span>
+              <span>Falar com Advogado</span>
             </a>
 
             <Link
               href="#sobre"
               className="btn-pill bg-white/95 text-black border-2 border-[#4E5357] hover:bg-white hover:border-[#372417] hover:scale-[1.02] shadow-md gap-2 py-3 sm:py-3.5 px-6 text-xs sm:text-sm font-semibold tracking-wide group transition-all text-center justify-center flex items-center cursor-pointer"
             >
-              <span className="text-black font-semibold">Conhecer o Advogado</span>
+              <span className="text-black font-semibold">Conhecer o Escritório</span>
               <ChevronRight className="w-4 h-4 text-[#4A3221] group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>

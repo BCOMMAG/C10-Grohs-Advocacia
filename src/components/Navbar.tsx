@@ -107,7 +107,7 @@ export function Navbar() {
                 Início
               </Link>
               <Link href="#sobre" className="transition-colors editorial-link hover:text-[var(--accent)] font-semibold">
-                O Advogado
+                O Escritório
               </Link>
               <Link href="#avaliacoes" className="transition-colors editorial-link hover:text-[var(--accent)] font-semibold">
                 Avaliações
@@ -199,7 +199,7 @@ export function Navbar() {
                 Início
               </Link>
               <Link href="#sobre" onClick={closeMobileMenu} className="py-2.5 hover:text-[var(--accent)] border-b border-[var(--border-subtle)]/15">
-                O Advogado
+                O Escritório
               </Link>
               <Link href="#avaliacoes" onClick={closeMobileMenu} className="py-2.5 hover:text-[var(--accent)] border-b border-[var(--border-subtle)]/15">
                 Avaliações no Google

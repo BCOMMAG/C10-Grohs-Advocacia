@@ -33,7 +33,7 @@ export default function LinksPage() {
     {
       id: "whatsapp",
       title: "Atendimento WhatsApp Direto",
-      subtitle: `${OFFICE_INFO.whatsappFormatted} • Fale diretamente com o Dr. João Rodrigo`,
+      subtitle: `${OFFICE_INFO.whatsappFormatted} • Fale com um advogado especialista`,
       href: OFFICE_INFO.whatsappUrl,
       icon: MessageSquare,
       highlight: true,
@@ -73,7 +73,7 @@ export default function LinksPage() {
     {
       id: "linkedin",
       title: "Conectar no LinkedIn",
-      subtitle: "Perfil profissional do Dr. João Rodrigo Pimentel Grohs",
+      subtitle: "Perfil institucional da Grohs Sociedade de Advogados",
       href: OFFICE_INFO.social.linkedin,
       icon: LinkedinIcon,
       highlight: false,

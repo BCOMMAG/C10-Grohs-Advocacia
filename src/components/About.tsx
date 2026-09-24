@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { LAWYER_PROFILE, OFFICE_INFO } from "@/lib/data";
-import { Compass, Eye, ShieldCheck, MessageSquare, Sparkles } from "lucide-react";
+import { Compass, Eye, ShieldCheck, MessageSquare, Sparkles, Award, MapPin, Building2 } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -126,11 +126,11 @@ export function About() {
             <div className="flex items-center gap-3 mb-2">
               <span className="bullet-indicator text-[#4A3221] dark:text-[#A0A5A9]" />
               <span className="font-heading uppercase text-xs tracking-widest text-[#4A3221] dark:text-[#A0A5A9] font-bold">
-                01 / Perfil Profissional & Experiência
+                01 / O Escritório
               </span>
             </div>
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-[var(--text-main)] font-semibold uppercase">
-              Dr. João Rodrigo Grohs
+              Grohs Sociedade de Advogados
             </h2>
           </div>
           <p className="font-body text-sm sm:text-base text-[var(--text-muted)] max-w-xl leading-relaxed">
@@ -138,7 +138,7 @@ export function About() {
           </p>
         </div>
 
-        {/* Bloco Principal: Layout split-screen */}
+        {/* Bloco Principal: Layout split-screen com Foco Institucional */}
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center mb-16 relative">
           {/* Coluna de Conteúdo e Textos */}
           <div ref={textContentRef} className="lg:col-span-7 order-2 lg:order-1 flex flex-col justify-start space-y-6">
@@ -182,41 +182,76 @@ export function About() {
                 href={OFFICE_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-pill bg-[#4A3221] hover:bg-[#372417] text-white gap-2 py-3 px-6 text-xs sm:text-sm shadow-xs hover-lift transition-all flex items-center cursor-pointer"
+                className="btn-pill bg-[#4A3221] hover:bg-[#372417] text-white gap-2 py-3.5 px-7 text-xs sm:text-sm font-semibold tracking-wide shadow-xs hover-lift transition-all flex items-center cursor-pointer"
               >
                 <MessageSquare className="w-4 h-4 fill-white" />
-                <span>Solicitar Análise de Caso</span>
+                <span>Falar com Advogado</span>
               </a>
             </div>
           </div>
 
-          {/* Coluna da Foto Oficial */}
+          {/* Coluna Institucional Corporativa (Substituindo a foto pessoal) */}
           <div className="lg:col-span-5 order-1 lg:order-2 w-full flex justify-center lg:justify-end">
-            <div ref={photoCardRef} className="w-full max-w-[360px] sm:max-w-[400px] will-change-transform">
-              <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] rounded-3xl overflow-hidden border-2 border-[#4E5357]/60 shadow-2xl hover-lift group bg-[#151A1F]">
-                {/* Feixe de luz suave */}
-                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent z-20 pointer-events-none" />
-                <Image
-                  src={LAWYER_PROFILE.photo}
-                  alt={LAWYER_PROFILE.name}
-                  fill
-                  priority
-                  className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                  sizes="(max-width: 768px) 90vw, 420px"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent pointer-events-none" />
+            <div ref={photoCardRef} className="w-full max-w-[380px] sm:max-w-[420px] will-change-transform">
+              <div className="relative rounded-3xl overflow-hidden border-2 border-[#4E5357]/60 shadow-2xl bg-gradient-to-br from-[#181D22] via-[#121518] to-[#0A0C0E] p-7 sm:p-8 flex flex-col justify-between text-white space-y-6">
+                {/* Feixe luminoso suave no topo */}
+                <div className="absolute top-0 right-0 w-48 h-48 bg-[#4A3221]/25 rounded-full blur-3xl pointer-events-none" />
 
-                {/* Badge Inferior com Nome e Titularidade */}
-                <div className="absolute bottom-5 left-5 right-5 text-white z-10 pointer-events-none">
-                  <span className="text-[0.6875rem] uppercase tracking-widest text-[#D1D5D8] font-heading font-semibold block mb-1">
-                    Advogado Titular • {OFFICE_INFO.oab}
-                  </span>
-                  <p className="font-heading text-xl sm:text-2xl font-bold leading-tight text-white drop-shadow-sm uppercase">
-                    {LAWYER_PROFILE.name}
-                  </p>
-                  <p className="text-xs text-gray-200 font-body mt-1 leading-relaxed">
-                    Especialista em Direito e Processo do Trabalho
-                  </p>
+                {/* Logo da banca */}
+                <div className="relative z-10 space-y-3">
+                  <div className="relative h-14 sm:h-16 w-56 sm:w-64">
+                    <Image
+                      src="/Logosemfundo_escritaescura_usarnomodoescuro.png"
+                      alt="Grohs Sociedade de Advogados"
+                      fill
+                      priority
+                      className="object-contain object-left drop-shadow-md"
+                      sizes="260px"
+                    />
+                  </div>
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-[0.6875rem] font-heading tracking-widest text-[#D1D5D8] uppercase">
+                    <ShieldCheck className="w-3.5 h-3.5 text-[#A0A5A9]" />
+                    <span>{OFFICE_INFO.oab}</span>
+                  </div>
+                </div>
+
+                {/* Pilares Institucionais no Card */}
+                <div className="relative z-10 space-y-3.5 pt-2 border-t border-white/10 font-body text-xs sm:text-sm text-gray-300">
+                  <div className="flex items-start gap-3">
+                    <div className="w-7 h-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-[#A0A5A9] mt-0.5">
+                      <Award className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <strong className="block text-white font-heading text-xs uppercase tracking-wider">Tradição & Especialização</strong>
+                      <span className="text-gray-300 text-xs">13 anos de sólida atuação em advocacia privada trabalhista.</span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-7 h-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-[#A0A5A9] mt-0.5">
+                      <MapPin className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <strong className="block text-white font-heading text-xs uppercase tracking-wider">Atendimento Híbrido</strong>
+                      <span className="text-gray-300 text-xs">Sede em Curitiba/PR (Bom Retiro) e suporte online nacional.</span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-7 h-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-[#A0A5A9] mt-0.5">
+                      <Building2 className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <strong className="block text-white font-heading text-xs uppercase tracking-wider">Estrutura Dedicada</strong>
+                      <span className="text-gray-300 text-xs">Acompanhamento processual ético, transparente e individualizado.</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Rodapé do Card */}
+                <div className="relative z-10 pt-3 border-t border-white/10 flex items-center justify-between text-[0.6875rem] font-heading uppercase text-gray-400">
+                  <span>Curitiba / PR</span>
+                  <span className="text-[#A0A5A9] font-bold">Direito do Trabalho</span>
                 </div>
               </div>
             </div>

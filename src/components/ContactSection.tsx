@@ -206,7 +206,7 @@ export function ContactSection() {
                 className="w-full btn-pill bg-[#4A3221] hover:bg-[#372417] text-white py-3.5 gap-2 shadow-md text-sm sm:text-base cursor-pointer hover-lift transition-all uppercase font-heading font-semibold"
               >
                 <MessageSquare className="w-4 h-4 fill-white" />
-                <span>Falar com o Dr. João Rodrigo</span>
+                <span>Falar com Advogado</span>
               </a>
             </div>
           </div>
