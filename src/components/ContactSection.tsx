@@ -226,11 +226,11 @@ export function ContactSection() {
                 className="w-full h-full grayscale-[25%] contrast-[1.05]"
               />
               {/* Badge de Identificação no Topo do Mapa */}
-              <div className="absolute top-4 left-4 p-3 rounded-xl bg-white/95 dark:bg-[#151A1F]/95 backdrop-blur-md border border-[var(--border-subtle)]/30 text-xs shadow-md">
-                <span className="font-heading font-bold text-[var(--text-main)] block uppercase">
+              <div className="absolute top-4 left-4 p-3 rounded-xl bg-[#121518]/95 dark:bg-[#151A1F]/95 backdrop-blur-md border border-white/15 text-xs shadow-md">
+                <span className="font-heading font-bold text-white block uppercase">
                   Grohs Sociedade de Advogados
                 </span>
-                <span className="text-[var(--text-muted)] font-body">
+                <span className="text-gray-300 font-body">
                   Av. Desembargador Hugo Simas, 1120 - Curitiba/PR
                 </span>
               </div>
