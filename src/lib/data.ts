@@ -76,7 +76,7 @@ export const OFFICE_INFO = {
     vision: "Ser referência contínua em advocacia trabalhista pela profundidade técnica, atendimento exclusivo e resolutividade estratégica em causas de alta complexidade.",
     values: [
       "Rigor Técnico e Especialização Constante",
-      "Ética e Transparência Estrita (CFOAB)",
+      "Ética e Transparência Estrita",
       "Comprometimento Incansável com a Justiça do Trabalho",
     ],
   },

@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import Image from "next/image";
 import { LAWYER_PROFILE, OFFICE_INFO } from "@/lib/data";
-import { Compass, Eye, ShieldCheck, MessageSquare, ChevronDown, Sparkles } from "lucide-react";
+import { Compass, Eye, ShieldCheck, MessageSquare, Sparkles } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -13,8 +13,6 @@ if (typeof window !== "undefined") {
 }
 
 export function About() {
-  const [isExpanded, setIsExpanded] = useState(false);
-
   const sectionRef = useRef<HTMLElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
   const photoCardRef = useRef<HTMLDivElement>(null);
@@ -111,13 +109,6 @@ export function About() {
     { scope: sectionRef }
   );
 
-  const handleToggleExpand = () => {
-    setIsExpanded((prev) => !prev);
-    setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 250);
-  };
-
   return (
     <section
       id="sobre"
@@ -185,46 +176,18 @@ export function About() {
               </div>
             </div>
 
-            {/* Botões de Ação */}
-            <div className="about-text-anim flex flex-wrap items-center gap-3.5 pt-2">
-              <button
-                type="button"
-                onClick={handleToggleExpand}
-                className="btn-pill bg-white dark:bg-[#151A1F] text-[#1A1D20] dark:text-white border-2 border-[#4E5357] hover:bg-[#4A3221] hover:text-white dark:hover:bg-[#4A3221] dark:hover:text-white gap-2 py-3 px-6 text-xs sm:text-sm font-semibold shadow-xs hover-lift transition-all cursor-pointer flex items-center"
-                aria-expanded={isExpanded}
-              >
-                <span>{isExpanded ? "Ocultar detalhes curriculares" : "Saber mais sobre a trajetória do Dr. João Rodrigo"}</span>
-                <ChevronDown
-                  className={`w-4 h-4 transition-transform duration-300 ${
-                    isExpanded ? "rotate-180" : "rotate-0"
-                  }`}
-                />
-              </button>
-
+            {/* Botão de Ação */}
+            <div className="about-text-anim flex items-center pt-2">
               <a
                 href={OFFICE_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-pill bg-[#4A3221] hover:bg-[#372417] text-white gap-2 py-3 px-6 text-xs sm:text-sm shadow-xs hover-lift transition-all flex items-center"
+                className="btn-pill bg-[#4A3221] hover:bg-[#372417] text-white gap-2 py-3 px-6 text-xs sm:text-sm shadow-xs hover-lift transition-all flex items-center cursor-pointer"
               >
                 <MessageSquare className="w-4 h-4 fill-white" />
                 <span>Solicitar Análise de Caso</span>
               </a>
             </div>
-
-            {/* CONTEÚDO COMPLETO CONDICIONAL */}
-            {isExpanded && (
-              <div className="space-y-6 pt-4 border-t border-[var(--border-subtle)]/30 animate-fade-in-down">
-                <div className="p-5 sm:p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/30 shadow-xs space-y-3">
-                  <h4 className="font-heading text-base font-bold text-[var(--text-main)] uppercase">
-                    Trajetória Forense e Foco em Excelência
-                  </h4>
-                  <p className="font-body text-xs sm:text-sm text-[var(--text-muted)] leading-relaxed">
-                    Com graduação concluída em 2012 pelo tradicional Centro Universitário Curitiba (UniCuritiba) e curso de especialização direito previdenciário e do trabalho pela Escola da Magistratura da 09ª Região (EMATRA-IX) em 2021, Dr. João Rodrigo Pimentel Grohs construiu uma carreira focada na resolução estratégica de conflitos trabalhistas, assegurando que cada cliente tenha acompanhamento técnico refinado e atendimento pautado pela ética e transparência.
-                  </p>
-                </div>
-              </div>
-            )}
           </div>
 
           {/* Coluna da Foto Oficial */}
