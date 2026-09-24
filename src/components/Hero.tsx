@@ -107,7 +107,7 @@ export function Hero() {
           {/* Headline Principal (Direta, em no máximo 2 linhas) */}
           <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.12] tracking-tight text-white font-semibold drop-shadow-[0_2px_14px_rgba(0,0,0,0.9)] uppercase">
             Defesa trabalhista com{" "}
-            <span className="text-[#A0A5A9] underline decoration-[#4A3221] underline-offset-8">
+            <span className="text-[#A0A5A9]">
               rigor técnico
             </span>{" "}
             e excelência processual.
