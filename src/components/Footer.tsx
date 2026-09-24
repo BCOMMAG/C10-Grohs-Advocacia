@@ -31,7 +31,7 @@ export function Footer() {
             </div>
             
             <p className="font-body text-xs sm:text-sm text-gray-300 max-w-sm leading-relaxed">
-              Advocacia trabalhista e previdenciária exercida por profissionais com especialização e 13 anos de experiência para um trabalho de excelência. Atendimento ético e técnico em Curitiba/PR e em âmbito nacional.
+              Advocacia trabalhista exercida por profissionais com especialização e 13 anos de experiência para um trabalho de excelência. Atendimento ético e técnico em Curitiba/PR e em âmbito nacional.
             </p>
 
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/20 bg-white/5 text-xs font-heading text-[#D1D5D8] uppercase tracking-wide">
@@ -53,16 +53,10 @@ export function Footer() {
                 <Link href="#sobre" className="hover:text-white transition-colors">O Advogado</Link>
               </li>
               <li>
-                <Link href="#atuacao" className="hover:text-white transition-colors">Áreas de Atuação</Link>
-              </li>
-              <li>
-                <Link href="#educativo" className="hover:text-white transition-colors">Conteúdo Jurídico</Link>
-              </li>
-              <li>
                 <Link href="#avaliacoes" className="hover:text-white transition-colors">Avaliações (Google)</Link>
               </li>
               <li>
-                <Link href="#faq" className="hover:text-white transition-colors">Perguntas Frequentes</Link>
+                <Link href="#como-atuamos" className="hover:text-white transition-colors">Como Trabalhamos</Link>
               </li>
               <li>
                 <Link href="#contato" className="hover:text-white transition-colors">Contato & Localização</Link>

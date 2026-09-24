@@ -102,7 +102,7 @@ export function ContactSection() {
             <div className="flex items-center gap-3 mb-2">
               <span className="bullet-indicator text-[#4A3221] dark:text-[#A0A5A9]" />
               <span className="font-heading uppercase text-xs tracking-widest text-[#4A3221] dark:text-[#A0A5A9] font-bold">
-                07 / Canais Oficiais de Atendimento
+                04 / Canais Oficiais de Atendimento
               </span>
             </div>
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-[var(--text-main)] font-semibold uppercase">
@@ -130,9 +130,6 @@ export function ContactSection() {
                   </span>
                   <p className="font-heading text-lg font-bold text-[var(--text-main)]">
                     {OFFICE_INFO.whatsappFormatted} • {OFFICE_INFO.phone}
-                  </p>
-                  <p className="text-xs font-body text-[var(--text-muted)] mt-1">
-                    Atendimento direto com o Dr. João Rodrigo Grohs para análise inicial do caso.
                   </p>
                 </div>
               </div>

@@ -72,7 +72,7 @@ export function ReviewsSection() {
             <div className="flex items-center gap-3 mb-2">
               <span className="bullet-indicator text-[#4A3221] dark:text-[#A0A5A9]" />
               <span className="font-heading uppercase text-xs tracking-widest text-[#4A3221] dark:text-[#A0A5A9] font-bold">
-                04 / Reconhecimento & Confiança
+                02 / Reconhecimento & Confiança
               </span>
             </div>
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-[var(--text-main)] font-semibold uppercase">

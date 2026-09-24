@@ -117,7 +117,7 @@ export function Hero() {
         {/* Base do Hero: Subtítulo + Botões de Conversão + Destaques de Rodapé */}
         <div className="pb-2 sm:pb-4 lg:pb-4 max-w-3xl mt-6 sm:mt-8 lg:mt-auto animate-fade-in-up">
           <p className="font-body text-xs sm:text-base lg:text-lg text-gray-200 max-w-2xl leading-relaxed mb-6 font-normal drop-shadow-sm">
-            Fruto do trabalho do advogado João Rodrigo Pimentel Grohs, com 13 anos de experiência na advocacia privada e especialização pela UniCuritiba e EMATRA-IX. Atendimento direto, estratégico e transparente em Curitiba e em todo o Brasil.
+            Fruto do trabalho do advogado João Rodrigo Pimentel Grohs, com 13 anos de experiência na advocacia privada, com formação pelo Centro Universitário Curitiba - UniCuritiba e especialização pela Escola da Magistratura da 9ª Região - EMATRA-IX. Atendimento direto, estratégico e transparente.
           </p>
 
           {/* CTAs com Hover e Microinterações */}
@@ -133,10 +133,10 @@ export function Hero() {
             </a>
 
             <Link
-              href="#atuacao"
+              href="#sobre"
               className="btn-pill bg-white/95 text-black border-2 border-[#4E5357] hover:bg-white hover:border-[#372417] hover:scale-[1.02] shadow-md gap-2 py-3 sm:py-3.5 px-6 text-xs sm:text-sm font-semibold tracking-wide group transition-all text-center justify-center flex items-center cursor-pointer"
             >
-              <span className="text-black font-semibold">Conhecer Áreas de Atuação</span>
+              <span className="text-black font-semibold">Conhecer o Advogado</span>
               <ChevronRight className="w-4 h-4 text-[#4A3221] group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>

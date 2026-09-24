@@ -10,14 +10,10 @@ interface SectionItem {
 
 const SECTIONS: SectionItem[] = [
   { id: "inicio", num: "01", name: "Início" },
-  { id: "pilares", num: "02", name: "Pilares" },
-  { id: "sobre", num: "03", name: "O Advogado" },
-  { id: "atuacao", num: "04", name: "Especialidades" },
-  { id: "educativo", num: "05", name: "Conteúdo" },
-  { id: "avaliacoes", num: "06", name: "Avaliações" },
-  { id: "como-atuamos", num: "07", name: "Atendimento" },
-  { id: "faq", num: "08", name: "Dúvidas" },
-  { id: "contato", num: "09", name: "Contato" },
+  { id: "sobre", num: "02", name: "O Advogado" },
+  { id: "avaliacoes", num: "03", name: "Avaliações" },
+  { id: "como-atuamos", num: "04", name: "Atendimento" },
+  { id: "contato", num: "05", name: "Contato" },
 ];
 
 export function DesktopScrollIndicator() {

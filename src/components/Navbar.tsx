@@ -6,38 +6,13 @@ import Link from "next/link";
 import { useTheme } from "@/context/ThemeContext";
 import { ThemeToggle } from "./ThemeToggle";
 import { OFFICE_INFO } from "@/lib/data";
-import { Menu, X, ChevronDown, ShieldCheck, ArrowUpRight } from "lucide-react";
+import { Menu, X, ShieldCheck } from "lucide-react";
 import { WhatsAppIcon } from "@/components/SocialIcons";
 
 export function Navbar() {
   const { theme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  // Estados dos submenus dropdown no desktop
-  const [officeDropdownOpen, setOfficeDropdownOpen] = useState(false);
-  const [areasDropdownOpen, setAreasDropdownOpen] = useState(false);
-
-  // Estados dos submenus no mobile (Accordion)
-  const [mobileOfficeOpen, setMobileOfficeOpen] = useState(false);
-  const [mobileAreasOpen, setMobileAreasOpen] = useState(false);
-
-  const officeRef = useRef<HTMLDivElement>(null);
-  const areasRef = useRef<HTMLDivElement>(null);
-
-  // Fecha dropdowns ao clicar fora no desktop
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (officeRef.current && !officeRef.current.contains(event.target as Node)) {
-        setOfficeDropdownOpen(false);
-      }
-      if (areasRef.current && !areasRef.current.contains(event.target as Node)) {
-        setAreasDropdownOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,8 +47,6 @@ export function Navbar() {
 
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
-    setMobileOfficeOpen(false);
-    setMobileAreasOpen(false);
   };
 
   return (
@@ -133,157 +106,15 @@ export function Navbar() {
               <Link href="#inicio" className="transition-colors editorial-link hover:text-[var(--accent)] font-semibold">
                 Início
               </Link>
-
-              {/* Submenu 1: O Escritório */}
-              <div
-                ref={officeRef}
-                className="relative"
-                onMouseEnter={() => setOfficeDropdownOpen(true)}
-                onMouseLeave={() => setOfficeDropdownOpen(false)}
-              >
-                <button
-                  type="button"
-                  onClick={() => setOfficeDropdownOpen(!officeDropdownOpen)}
-                  className="inline-flex items-center gap-1.5 transition-colors py-2 focus:outline-none cursor-pointer hover:text-[var(--accent)] font-semibold"
-                  aria-expanded={officeDropdownOpen}
-                >
-                  <span className="editorial-link">O Escritório</span>
-                  <ChevronDown
-                    className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                      officeDropdownOpen ? "rotate-180 text-[var(--accent)]" : "opacity-70"
-                    }`}
-                  />
-                </button>
-
-                {/* Dropdown Card */}
-                {officeDropdownOpen && (
-                  <div className="absolute top-full left-0 w-64 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/40 shadow-2xl p-2.5 space-y-1 z-50 text-[var(--text-main)] normal-case animate-fade-in-down">
-                    <Link
-                      href="#sobre"
-                      onClick={() => setOfficeDropdownOpen(false)}
-                      className="p-3 rounded-xl hover:bg-[var(--bg-secondary)]/80 flex items-center justify-between group transition-colors"
-                    >
-                      <div>
-                        <span className="font-heading font-bold text-sm block group-hover:text-[var(--accent)]">
-                          O Advogado
-                        </span>
-                        <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">
-                          Dr. João Rodrigo Grohs • 13 Anos
-                        </span>
-                      </div>
-                      <ArrowUpRight className="w-3.5 h-3.5 text-[var(--text-muted)] group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                    </Link>
-
-                    <Link
-                      href="#como-atuamos"
-                      onClick={() => setOfficeDropdownOpen(false)}
-                      className="p-3 rounded-xl hover:bg-[var(--bg-secondary)]/80 flex items-center justify-between group transition-colors"
-                    >
-                      <div>
-                        <span className="font-heading font-bold text-sm block group-hover:text-[var(--accent)]">
-                          Como Atuamos
-                        </span>
-                        <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">
-                          Método de trabalho e estratégia
-                        </span>
-                      </div>
-                      <ArrowUpRight className="w-3.5 h-3.5 text-[var(--text-muted)] group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                    </Link>
-
-                    <Link
-                      href="#avaliacoes"
-                      onClick={() => setOfficeDropdownOpen(false)}
-                      className="p-3 rounded-xl hover:bg-[var(--bg-secondary)]/80 flex items-center justify-between group transition-colors"
-                    >
-                      <div>
-                        <span className="font-heading font-bold text-sm block group-hover:text-[var(--accent)]">
-                          Avaliações (Google)
-                        </span>
-                        <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">
-                          Opiniões e avaliações de clientes
-                        </span>
-                      </div>
-                      <ArrowUpRight className="w-3.5 h-3.5 text-[var(--text-muted)] group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                    </Link>
-                  </div>
-                )}
-              </div>
-
-              {/* Submenu 2: Atuação & Conteúdo */}
-              <div
-                ref={areasRef}
-                className="relative"
-                onMouseEnter={() => setAreasDropdownOpen(true)}
-                onMouseLeave={() => setAreasDropdownOpen(false)}
-              >
-                <button
-                  type="button"
-                  onClick={() => setAreasDropdownOpen(!areasDropdownOpen)}
-                  className="inline-flex items-center gap-1.5 transition-colors py-2 focus:outline-none cursor-pointer hover:text-[var(--accent)] font-semibold"
-                  aria-expanded={areasDropdownOpen}
-                >
-                  <span className="editorial-link">Atuação & Conteúdo</span>
-                  <ChevronDown
-                    className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                      areasDropdownOpen ? "rotate-180 text-[var(--accent)]" : "opacity-70"
-                    }`}
-                  />
-                </button>
-
-                {/* Dropdown Card */}
-                {areasDropdownOpen && (
-                  <div className="absolute top-full left-0 w-68 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/40 shadow-2xl p-2.5 space-y-1 z-50 text-[var(--text-main)] normal-case animate-fade-in-down">
-                    <Link
-                      href="#atuacao"
-                      onClick={() => setAreasDropdownOpen(false)}
-                      className="p-3 rounded-xl hover:bg-[var(--bg-secondary)]/80 flex items-center justify-between group transition-colors"
-                    >
-                      <div>
-                        <span className="font-heading font-bold text-sm block group-hover:text-[var(--accent)]">
-                          Áreas de Atuação
-                        </span>
-                        <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">
-                          Direito do Trabalho & Previdenciário
-                        </span>
-                      </div>
-                      <ArrowUpRight className="w-3.5 h-3.5 text-[var(--text-muted)] group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                    </Link>
-
-                    <Link
-                      href="#educativo"
-                      onClick={() => setAreasDropdownOpen(false)}
-                      className="p-3 rounded-xl hover:bg-[var(--bg-secondary)]/80 flex items-center justify-between group transition-colors"
-                    >
-                      <div>
-                        <span className="font-heading font-bold text-sm block group-hover:text-[var(--accent)]">
-                          Conteúdo Educativo
-                        </span>
-                        <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">
-                          Artigos e orientações éticas CFOAB
-                        </span>
-                      </div>
-                      <ArrowUpRight className="w-3.5 h-3.5 text-[var(--text-muted)] group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                    </Link>
-
-                    <Link
-                      href="#faq"
-                      onClick={() => setAreasDropdownOpen(false)}
-                      className="p-3 rounded-xl hover:bg-[var(--bg-secondary)]/80 flex items-center justify-between group transition-colors"
-                    >
-                      <div>
-                        <span className="font-heading font-bold text-sm block group-hover:text-[var(--accent)]">
-                          Dúvidas Frequentes (FAQ)
-                        </span>
-                        <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">
-                          Respostas diretas para dúvidas trabalhistas
-                        </span>
-                      </div>
-                      <ArrowUpRight className="w-3.5 h-3.5 text-[var(--text-muted)] group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                    </Link>
-                  </div>
-                )}
-              </div>
-
+              <Link href="#sobre" className="transition-colors editorial-link hover:text-[var(--accent)] font-semibold">
+                O Advogado
+              </Link>
+              <Link href="#avaliacoes" className="transition-colors editorial-link hover:text-[var(--accent)] font-semibold">
+                Avaliações
+              </Link>
+              <Link href="#como-atuamos" className="transition-colors editorial-link hover:text-[var(--accent)] font-semibold">
+                Atendimento
+              </Link>
               <Link href="#contato" className="transition-colors editorial-link hover:text-[var(--accent)] font-semibold">
                 Contato
               </Link>
@@ -362,67 +193,24 @@ export function Navbar() {
               <span>{OFFICE_INFO.oab}</span>
             </div>
 
-            {/* Navegação Mobile Enxuta com Submenus */}
-            <nav className="flex flex-col space-y-2 font-heading text-base font-medium text-[var(--text-main)] pt-2">
-              <Link href="#inicio" onClick={closeMobileMenu} className="py-2 hover:text-[var(--accent)] border-b border-[var(--border-subtle)]/15">
+            {/* Navegação Mobile Enxuta */}
+            <nav className="flex flex-col space-y-1 font-heading text-base font-medium text-[var(--text-main)] pt-2">
+              <Link href="#inicio" onClick={closeMobileMenu} className="py-2.5 hover:text-[var(--accent)] border-b border-[var(--border-subtle)]/15">
                 Início
               </Link>
-
-              {/* Submenu Mobile: O Escritório */}
-              <div className="border-b border-[var(--border-subtle)]/15 py-1">
-                <button
-                  type="button"
-                  onClick={() => setMobileOfficeOpen(!mobileOfficeOpen)}
-                  className="w-full flex items-center justify-between py-2 text-left hover:text-[var(--accent)] cursor-pointer"
-                >
-                  <span>O Escritório</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileOfficeOpen ? "rotate-180 text-[var(--accent)]" : ""}`} />
-                </button>
-                {mobileOfficeOpen && (
-                  <div className="pl-4 pb-2 space-y-2 text-sm text-[var(--text-muted)] font-body animate-fade-in-down">
-                    <Link href="#sobre" onClick={closeMobileMenu} className="block py-1 hover:text-[var(--accent)]">
-                      • Dr. João Rodrigo Grohs (13 Anos)
-                    </Link>
-                    <Link href="#como-atuamos" onClick={closeMobileMenu} className="block py-1 hover:text-[var(--accent)]">
-                      • Como Atuamos
-                    </Link>
-                    <Link href="#avaliacoes" onClick={closeMobileMenu} className="block py-1 hover:text-[var(--accent)]">
-                      • Avaliações no Google
-                    </Link>
-                  </div>
-                )}
-              </div>
-
-              {/* Submenu Mobile: Atuação & Conteúdo */}
-              <div className="border-b border-[var(--border-subtle)]/15 py-1">
-                <button
-                  type="button"
-                  onClick={() => setMobileAreasOpen(!mobileAreasOpen)}
-                  className="w-full flex items-center justify-between py-2 text-left hover:text-[var(--accent)] cursor-pointer"
-                >
-                  <span>Atuação & Conteúdo</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileAreasOpen ? "rotate-180 text-[var(--accent)]" : ""}`} />
-                </button>
-                {mobileAreasOpen && (
-                  <div className="pl-4 pb-2 space-y-2 text-sm text-[var(--text-muted)] font-body animate-fade-in-down">
-                    <Link href="#atuacao" onClick={closeMobileMenu} className="block py-1 hover:text-[var(--accent)]">
-                      • Áreas de Atuação
-                    </Link>
-                    <Link href="#educativo" onClick={closeMobileMenu} className="block py-1 hover:text-[var(--accent)]">
-                      • Conteúdo Jurídico (CFOAB)
-                    </Link>
-                    <Link href="#faq" onClick={closeMobileMenu} className="block py-1 hover:text-[var(--accent)]">
-                      • Perguntas Frequentes (FAQ)
-                    </Link>
-                  </div>
-                )}
-              </div>
-
-              <Link href="#contato" onClick={closeMobileMenu} className="py-2 hover:text-[var(--accent)] border-b border-[var(--border-subtle)]/15">
+              <Link href="#sobre" onClick={closeMobileMenu} className="py-2.5 hover:text-[var(--accent)] border-b border-[var(--border-subtle)]/15">
+                O Advogado
+              </Link>
+              <Link href="#avaliacoes" onClick={closeMobileMenu} className="py-2.5 hover:text-[var(--accent)] border-b border-[var(--border-subtle)]/15">
+                Avaliações no Google
+              </Link>
+              <Link href="#como-atuamos" onClick={closeMobileMenu} className="py-2.5 hover:text-[var(--accent)] border-b border-[var(--border-subtle)]/15">
+                Como Atuamos
+              </Link>
+              <Link href="#contato" onClick={closeMobileMenu} className="py-2.5 hover:text-[var(--accent)] border-b border-[var(--border-subtle)]/15">
                 Contato & Localização
               </Link>
-              
-              <Link href="/links" onClick={closeMobileMenu} className="py-2 text-[var(--accent)] font-semibold">
+              <Link href="/links" onClick={closeMobileMenu} className="py-2.5 text-[var(--accent)] font-semibold">
                 Link-in-Bio (/links)
               </Link>
             </nav>

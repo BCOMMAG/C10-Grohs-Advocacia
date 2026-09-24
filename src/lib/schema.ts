@@ -8,7 +8,7 @@ export function getLegalServiceSchema() {
     name: OFFICE_INFO.name,
     alternateName: "Grohs Advocacia Trabalhista",
     description:
-      "Advocacia trabalhista e previdenciária exercida com rigor técnico, especialização e 13 anos de experiência em Curitiba/PR. Dr. João Rodrigo Pimentel Grohs.",
+      "Advocacia trabalhista exercida com rigor técnico, especialização e 13 anos de experiência em Curitiba/PR. Dr. João Rodrigo Pimentel Grohs.",
     url: "https://grohs.adv.br",
     telephone: `+${OFFICE_INFO.whatsappNumber}`,
     email: OFFICE_INFO.email,

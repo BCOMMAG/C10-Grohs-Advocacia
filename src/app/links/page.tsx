@@ -35,7 +35,7 @@ export default function LinksPage() {
     {
       id: "website",
       title: "Website Oficial Institucional",
-      subtitle: "Conheça nossas áreas de atuação trabalhista e previdenciária",
+      subtitle: "Conheça nossa atuação especializada no Direito do Trabalho",
       href: "/",
       icon: Globe,
       highlight: false,
@@ -72,7 +72,7 @@ export default function LinksPage() {
     "Reconhecimento CLT & Falsa PJ",
     "Assédio & Rescisão Indireta",
     "Acidentes de Trabalho & Doenças",
-    "Direito Previdenciário & INSS",
+    "Dano Moral & Assédio no Trabalho",
   ];
 
   return (
@@ -123,7 +123,7 @@ export default function LinksPage() {
             </h1>
 
             <p className="font-body text-xs xl:text-sm text-gray-300 max-w-xs mt-3 leading-relaxed">
-              13 anos de sólida atuação em Direito do Trabalho e Direito Previdenciário. Dr. João Rodrigo Pimentel Grohs.
+              13 anos de sólida atuação especializada no Direito do Trabalho. Dr. João Rodrigo Pimentel Grohs.
             </p>
           </div>
 

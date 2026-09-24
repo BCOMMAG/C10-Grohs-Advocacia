@@ -72,12 +72,11 @@ export const OFFICE_INFO = {
     linkedin: "https://www.linkedin.com/in/joao-rodrigo-pimentel-grohs-861a244b/",
   },
   pillars: {
-    mission: "Prover representação e consultoria jurídica de alto padrão na seara trabalhista e previdenciária, pautada no rigor dogmático, ética inabalável e busca incessante pela justiça nas relações laborais.",
-    vision: "Ser referência contínua em advocacia trabalhista em Curitiba e no Paraná pela profundidade técnica, atendimento exclusivo e resolutividade estratégica em causas de alta complexidade.",
+    mission: "Prover representação e consultoria jurídica de alto padrão na seara trabalhista, pautada no rigor dogmático, ética inabalável e busca incessante pela justiça nas relações laborais.",
+    vision: "Ser referência contínua em advocacia trabalhista pela profundidade técnica, atendimento exclusivo e resolutividade estratégica em causas de alta complexidade.",
     values: [
       "Rigor Técnico e Especialização Constante",
       "Ética e Transparência Estrita (CFOAB)",
-      "Atendimento Direto e Individualizado com o Titular",
       "Comprometimento Incansável com a Justiça do Trabalho",
     ],
   },
@@ -93,9 +92,9 @@ export const LAWYER_PROFILE = {
   name: "João Rodrigo Pimentel Grohs",
   role: "Advogado Titular & Especialista Trabalhista",
   oab: "Inscrição Regular OAB/PR",
-  specialties: "Especialista em Direito do Trabalho, Processo do Trabalho e Previdenciário",
+  specialties: "Especialista em Direito e Processo do Trabalho",
   photo: "/foto_perfil.jpeg",
-  bio: "Grohs Advocacia Trabalhista é fruto do trabalho do advogado João Rodrigo Pimentel Grohs, cuja experiência na advocacia privada alcança 13 anos. Por acreditar que os profissionais tendem a entregar melhores resultados quando são especializados na área que se propõem a trabalhar, e pela vocação pelas matérias afetas ao Direito do Trabalho e Direito Previdenciário, a atuação do escritório está concentrada nessas disciplinas.\n\nCom formação acadêmica iniciada no tradicional Centro Universitário Curitiba (UniCuritiba) e aprimorada com curso de preparação da Magistratura na prestigiada Escola Judicial da Associação dos Magistrados da Justiça do Trabalho da 9ª Região (EMATRA-IX), Dr. João Rodrigo alia rigor processual, atualização jurisprudencial constante e atendimento humanizado e exclusivo a cada trabalhador.",
+  bio: "Grohs Advocacia Trabalhista é fruto do trabalho do advogado João Rodrigo Pimentel Grohs, cuja experiência na advocacia privada se iniciou em 2013. Por acreditar que os profissionais tendem a entregar melhores resultados quando são especializados na área que se propõem a trabalhar e pela vocação por matérias afetas ao Direito do Trabalho, a atuação do escritório está concentrada nessa disciplina.",
   academicSummary: [
     {
       institution: "EMATRA-IX (Escola da Magistratura do Trabalho da 9ª Região)",
@@ -408,7 +407,7 @@ export const WORK_STEPS: Step[] = [
     number: "01",
     title: "Análise Preliminar e Escuta Atenta",
     subtitle: "Compreensão aprofundada dos fatos e documentação",
-    description: "Você conversa diretamente com o Dr. João Rodrigo Pimentel Grohs para detalhar a rotina de trabalho, contratos, recibos e as irregularidades vivenciadas.",
+    description: "Você detalha a rotina de trabalho e as irregularidades vivenciadas.",
   },
   {
     number: "02",

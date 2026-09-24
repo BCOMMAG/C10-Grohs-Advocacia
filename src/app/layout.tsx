@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | Grohs Sociedade de Advogados",
   },
   description:
-    "Grohs Sociedade de Advogados - Advocacia trabalhista e previdenciária exercida por profissionais com especialização e 13 anos de experiência para um trabalho de excelência. Dr. João Rodrigo Pimentel Grohs. Curitiba - PR.",
+    "Grohs Sociedade de Advogados - Advocacia trabalhista exercida por profissionais com especialização e 13 anos de experiência para um trabalho de excelência. Dr. João Rodrigo Pimentel Grohs. Curitiba - PR.",
   keywords: [
     "advogado trabalhista curitiba",
     "grohs advocacia",

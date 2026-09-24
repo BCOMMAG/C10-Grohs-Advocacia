@@ -109,6 +109,7 @@ export function HowWeWork() {
       ref={sectionRef}
       className="py-16 sm:py-24 bg-[var(--bg-primary)] editorial-border-b w-full relative overflow-hidden"
     >
+      <div id="atendimento" className="scroll-mt-28" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Cabeçalho */}
         <div
@@ -119,7 +120,7 @@ export function HowWeWork() {
             <div className="flex items-center gap-3 mb-2">
               <span className="bullet-indicator text-[#4A3221] dark:text-[#A0A5A9]" />
               <span className="font-heading uppercase text-xs tracking-widest text-[#4A3221] dark:text-[#A0A5A9] font-bold">
-                05 / Clareza Procedimental
+                03 / Clareza Procedimental
               </span>
             </div>
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-[var(--text-main)] font-semibold uppercase">

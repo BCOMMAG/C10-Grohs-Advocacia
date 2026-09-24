@@ -3,7 +3,7 @@
 import { useState, useRef } from "react";
 import Image from "next/image";
 import { LAWYER_PROFILE, OFFICE_INFO } from "@/lib/data";
-import { GraduationCap, Compass, Eye, ShieldCheck, MessageSquare, ChevronDown, Sparkles } from "lucide-react";
+import { Compass, Eye, ShieldCheck, MessageSquare, ChevronDown, Sparkles } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -124,6 +124,7 @@ export function About() {
       ref={sectionRef}
       className="py-16 sm:py-24 bg-[var(--bg-primary)] editorial-border-b w-full relative overflow-hidden"
     >
+      <div id="advogado" className="scroll-mt-28" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Cabeçalho da Seção */}
         <div
@@ -169,20 +170,16 @@ export function About() {
 
             {/* Resumo da trajetória */}
             <p className="about-text-anim font-body text-sm sm:text-base text-[var(--text-main)] leading-relaxed font-normal">
-              Grohs Advocacia Trabalhista é fruto do trabalho do advogado João Rodrigo Pimentel Grohs, cuja experiência na advocacia privada alcança 13 anos. Por acreditar que os profissionais tendem a entregar melhores resultados quando são especializados na área que se propõem a trabalhar, e pela vocação pelas matérias afetas ao Direito do Trabalho e Direito Previdenciário, a atuação do escritório está concentrada nessas disciplinas.
+              {LAWYER_PROFILE.bio}
             </p>
 
             {/* Destaques Rápidos */}
-            <div className="about-text-anim grid grid-cols-2 sm:grid-cols-3 gap-3 pt-1">
+            <div className="about-text-anim grid grid-cols-2 gap-3 pt-1">
               <div className="p-3.5 rounded-xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/30 shadow-2xs">
                 <span className="font-heading text-xs font-bold text-[#4A3221] dark:text-[#A0A5A9] block">13 Anos</span>
                 <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">Experiência na advocacia privada</span>
               </div>
               <div className="p-3.5 rounded-xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/30 shadow-2xs">
-                <span className="font-heading text-xs font-bold text-[#4A3221] dark:text-[#A0A5A9] block">100% Pessoal</span>
-                <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">Atendimento direto com o titular</span>
-              </div>
-              <div className="p-3.5 rounded-xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/30 shadow-2xs col-span-2 sm:col-span-1">
                 <span className="font-heading text-xs font-bold text-[#4A3221] dark:text-[#A0A5A9] block">UniCuritiba & EMATRA-IX</span>
                 <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">Formação jurídica de alto rigor</span>
               </div>
@@ -223,36 +220,8 @@ export function About() {
                     Trajetória Forense e Foco em Excelência
                   </h4>
                   <p className="font-body text-xs sm:text-sm text-[var(--text-muted)] leading-relaxed">
-                    Com graduação concluída em 2012 pelo tradicional Centro Universitário Curitiba (UniCuritiba) e curso de formação de magistrados pela EMATRA-IX em 2021, Dr. João Rodrigo Pimentel Grohs construiu uma carreira focada na resolução estratégica de conflitos trabalhistas individuais e coletivos, assegurando que cada cliente tenha acompanhamento técnico refinado e atendimento pautado pela ética e transparência.
+                    Com graduação concluída em 2012 pelo tradicional Centro Universitário Curitiba (UniCuritiba) e curso de especialização direito previdenciário e do trabalho pela Escola da Magistratura da 09ª Região (EMATRA-IX) em 2021, Dr. João Rodrigo Pimentel Grohs construiu uma carreira focada na resolução estratégica de conflitos trabalhistas, assegurando que cada cliente tenha acompanhamento técnico refinado e atendimento pautado pela ética e transparência.
                   </p>
-                </div>
-
-                <div className="space-y-3">
-                  <h4 className="font-heading text-base font-bold text-[var(--text-main)] flex items-center gap-2 uppercase">
-                    <GraduationCap className="w-5 h-5 text-[#4A3221] dark:text-[#A0A5A9]" />
-                    <span>Formação Acadêmica & Prática Especializada</span>
-                  </h4>
-
-                  <div className="grid sm:grid-cols-2 gap-3.5">
-                    {LAWYER_PROFILE.academicSummary.map((item, idx) => (
-                      <div
-                        key={idx}
-                        className="p-4 rounded-xl border border-[var(--border-subtle)]/25 bg-[var(--bg-card)] shadow-2xs flex flex-col justify-between"
-                      >
-                        <div>
-                          <span className="font-heading text-xs uppercase tracking-wider text-[#4A3221] dark:text-[#A0A5A9] font-semibold block mb-1">
-                            {item.institution}
-                          </span>
-                          <h5 className="font-heading text-sm font-bold text-[var(--text-main)] leading-snug mb-1.5">
-                            {item.course}
-                          </h5>
-                          <p className="font-body text-xs text-[var(--text-muted)] leading-relaxed">
-                            {item.details}
-                          </p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
                 </div>
               </div>
             )}
@@ -283,7 +252,7 @@ export function About() {
                     {LAWYER_PROFILE.name}
                   </p>
                   <p className="text-xs text-gray-200 font-body mt-1 leading-relaxed">
-                    Especialista em Direito e Processo do Trabalho e Previdenciário
+                    Especialista em Direito e Processo do Trabalho
                   </p>
                 </div>
               </div>
