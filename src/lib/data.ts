@@ -51,7 +51,7 @@ export const OFFICE_INFO = {
   name: "Grohs Sociedade de Advogados",
   shortName: "Grohs Advocacia",
   lawyerName: "João Rodrigo Pimentel Grohs",
-  oab: "Inscrição Regular OAB/PR",
+  oab: "Inscrição na OAB/PR nº 65.902",
   tagline: "Advocacia Trabalhista Exercida com Rigor Técnico, Especialização e Ampla Experiência",
   address: "Av. Desembargador Hugo Simas, 1120 - Sl 207 - Bom Retiro, Curitiba - PR, 80520-250",
   addressShort: "Bom Retiro, Curitiba - PR",
@@ -62,7 +62,7 @@ export const OFFICE_INFO = {
   whatsappUrl: "https://wa.me/5541988370246?text=Ol%C3%A1%2C%20Dr.%20Jo%C3%A3o%20Rodrigo.%20Gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20jur%C3%ADdica.",
   mapsDirectionsUrl: "https://maps.google.com/?q=Av.+Desembargador+Hugo+Simas,+1120+-+Sl+207+-+Bom+Retiro,+Curitiba+-+PR,+80520-250",
   email: "grohs@grohs.adv.br",
-  experienceYears: "13 anos",
+  experienceYears: "Desde 2013",
   workingHours: {
     weekdays: "Segunda a Sexta: 09:00 às 12:00 | 13:30 às 18:00",
     weekends: "Sábado e Domingo: Fechado",
@@ -81,7 +81,7 @@ export const OFFICE_INFO = {
     ],
   },
   metrics: [
-    { value: "13+", label: "Anos de sólida trajetória na advocacia privada" },
+    { value: "Desde 2013", label: "Sólida trajetória na advocacia privada" },
     { value: "100%", label: "Atendimento direto com advogado titular especializado" },
     { value: "Rigor", label: "Padrão de excelência processual e técnica" },
     { value: "Ética", label: "Conformidade integral ao CFOAB e sigilo profissional" },
@@ -91,7 +91,7 @@ export const OFFICE_INFO = {
 export const LAWYER_PROFILE = {
   name: "João Rodrigo Pimentel Grohs",
   role: "Advogado Titular & Especialista Trabalhista",
-  oab: "Inscrição Regular OAB/PR",
+  oab: "Inscrição na OAB/PR nº 65.902",
   specialties: "Especialista em Direito e Processo do Trabalho",
   photo: "/foto_perfil.jpeg",
   bio: "Grohs Advocacia Trabalhista é fruto do trabalho do advogado João Rodrigo Pimentel Grohs, cuja experiência na advocacia privada se iniciou em 2013. Por acreditar que os profissionais tendem a entregar melhores resultados quando são especializados na área que se propõem a trabalhar e pela vocação por matérias afetas ao Direito do Trabalho, a atuação do escritório está concentrada nessa disciplina.",
@@ -108,8 +108,8 @@ export const LAWYER_PROFILE = {
     },
     {
       institution: "Advocacia Privada Especializada",
-      course: "13 Anos de Experiência e Prática Forense",
-      details: "Atuação constante em audiências, sustentações perante o TRT da 9ª Região e TST, elaboração de recursos e consultoria estratégica.",
+      course: "Atuação na Advocacia Privada Desde 2013",
+      details: "Atuação constante em audiências, sustentações perante os tribunais trabalhistas, elaboração de recursos e consultoria estratégica.",
     },
   ],
   quote: "Advocacia trabalhista exercida por profissionais com especialização e ampla experiência para um trabalho de excelência!",
@@ -413,7 +413,7 @@ export const WORK_STEPS: Step[] = [
     number: "02",
     title: "Diagnóstico Jurídico e Parecer Estratégico",
     subtitle: "Transparência total sobre a viabilidade e direitos",
-    description: "Apresentamos um parecer sincero e fundamentado na jurisprudência do TRT-9 e TST, esclarecendo riscos, direitos consolidados e alternativas de atuação.",
+    description: "Apresentamos um parecer sincero e fundamentado na jurisprudência trabalhista, esclarecendo riscos, direitos consolidados e alternativas de atuação.",
   },
   {
     number: "03",

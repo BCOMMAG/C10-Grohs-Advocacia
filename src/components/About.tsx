@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { LAWYER_PROFILE, OFFICE_INFO } from "@/lib/data";
-import { Compass, Eye, ShieldCheck, MessageSquare, Sparkles } from "lucide-react";
+import { Compass, Eye, ShieldCheck, MessageSquare } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -143,10 +143,6 @@ export function About() {
           {/* Coluna de Conteúdo e Textos */}
           <div ref={textContentRef} className="lg:col-span-7 order-2 lg:order-1 flex flex-col justify-start space-y-6">
             <div className="about-text-anim space-y-2">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#4A3221]/10 dark:bg-white/10 border border-[#4A3221]/30 dark:border-white/20 text-xs font-heading font-semibold text-[#4A3221] dark:text-[#D1D5D8] uppercase tracking-wide">
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>13 Anos de Atuação em Advocacia Privada</span>
-              </div>
               <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-[var(--text-main)] leading-tight uppercase">
                 Especialização e Rigor no Direito do Trabalho
               </h3>
@@ -163,18 +159,6 @@ export function About() {
             <p className="about-text-anim font-body text-sm sm:text-base text-[var(--text-main)] leading-relaxed font-normal">
               {LAWYER_PROFILE.bio}
             </p>
-
-            {/* Destaques Rápidos */}
-            <div className="about-text-anim grid grid-cols-2 gap-3 pt-1">
-              <div className="p-3.5 rounded-xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/30 shadow-2xs">
-                <span className="font-heading text-xs font-bold text-[#4A3221] dark:text-[#A0A5A9] block">13 Anos</span>
-                <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">Experiência na advocacia privada</span>
-              </div>
-              <div className="p-3.5 rounded-xl bg-[var(--bg-card)] border border-[var(--border-subtle)]/30 shadow-2xs">
-                <span className="font-heading text-xs font-bold text-[#4A3221] dark:text-[#A0A5A9] block">UniCuritiba & EMATRA-IX</span>
-                <span className="text-[0.6875rem] text-[var(--text-muted)] font-body">Formação jurídica de alto rigor</span>
-              </div>
-            </div>
 
             {/* Botão de Ação */}
             <div className="about-text-anim flex items-center pt-2">

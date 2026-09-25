@@ -119,18 +119,18 @@ export function InstitutionalPillars() {
               <Award className="w-5 h-5 text-[#4A3221] dark:text-[#A0A5A9]" />
               <span
                 className="metric-counter font-heading text-2xl sm:text-3xl font-bold tracking-tight text-[var(--text-main)]"
-                data-target="13"
-                data-prefix="+"
-                data-suffix=" Anos"
+                data-target="2013"
+                data-prefix="Desde "
+                data-suffix=""
               >
-                +13 Anos
+                Desde 2013
               </span>
             </div>
             <h3 className="font-heading text-base font-semibold text-[var(--text-main)] mb-1.5 uppercase">
               Advocacia Privada
             </h3>
             <p className="font-body text-xs sm:text-sm text-[var(--text-muted)] leading-relaxed">
-              Experiência consolidada de 13 anos na advocacia privada, com formação pela UniCuritiba (2012) e atuação contínua perante o TRT-9.
+              Atuação contínua e dedicada na advocacia privada iniciada em 2013, com formação pela UniCuritiba (2012) e prática forense especializada.
             </p>
           </div>
 

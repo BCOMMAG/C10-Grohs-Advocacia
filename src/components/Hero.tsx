@@ -4,7 +4,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { OFFICE_INFO, LAWYER_PROFILE } from "@/lib/data";
-import { MessageSquare, ChevronRight, ShieldCheck, Award, MapPin } from "lucide-react";
+import { MessageSquare, ChevronRight, ShieldCheck, MapPin } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -101,7 +101,7 @@ export function Hero() {
           {/* Badge de Autoridade */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/20 bg-black/40 backdrop-blur-md text-xs sm:text-sm font-heading tracking-wider uppercase text-[#D1D5D8] mb-5 shadow-sm">
             <ShieldCheck className="w-4 h-4 text-[#A0A5A9]" />
-            <span>Grohs Sociedade de Advogados • {OFFICE_INFO.experienceYears} de Experiência</span>
+            <span>Grohs Sociedade de Advogados</span>
           </div>
 
           {/* Headline Principal (Direta, em no máximo 2 linhas) */}
@@ -117,7 +117,7 @@ export function Hero() {
         {/* Base do Hero: Subtítulo + Botões de Conversão + Destaques de Rodapé */}
         <div className="pb-2 sm:pb-4 lg:pb-4 max-w-3xl mt-6 sm:mt-8 lg:mt-auto animate-fade-in-up">
           <p className="font-body text-xs sm:text-base lg:text-lg text-gray-200 max-w-2xl leading-relaxed mb-6 font-normal drop-shadow-sm">
-            Fruto do trabalho do advogado João Rodrigo Pimentel Grohs, com 13 anos de experiência na advocacia privada, com formação pelo Centro Universitário Curitiba - UniCuritiba e especialização pela Escola da Magistratura da 9ª Região - EMATRA-IX. Atendimento direto, estratégico e transparente.
+            Fruto do trabalho do advogado João Rodrigo Pimentel Grohs, com atuação na advocacia privada desde 2013, com formação pelo Centro Universitário Curitiba - UniCuritiba e especialização pela Escola da Magistratura da 9ª Região - EMATRA-IX. Atendimento direto, estratégico e transparente.
           </p>
 
           {/* CTAs com Hover e Microinterações */}
@@ -150,10 +150,6 @@ export function Hero() {
               </span>
             </div>
             <div className="flex items-center gap-5 text-xs font-heading text-white/80">
-              <span className="flex items-center gap-1.5">
-                <Award className="w-3.5 h-3.5 text-[#A0A5A9]" />
-                UniCuritiba & EMATRA-IX
-              </span>
               <span className="flex items-center gap-1.5">
                 <MapPin className="w-3.5 h-3.5 text-[#A0A5A9]" />
                 Atendimento Presencial e Online

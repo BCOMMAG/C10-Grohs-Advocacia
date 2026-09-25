@@ -137,7 +137,7 @@ export default function LinksPage() {
             </h1>
 
             <p className="font-body text-xs xl:text-sm text-gray-300 max-w-xs mt-3 leading-relaxed">
-              13 anos de sólida atuação especializada no Direito do Trabalho. Dr. João Rodrigo Pimentel Grohs.
+              Atuação na advocacia privada desde 2013 com sólida especialização no Direito do Trabalho. Dr. João Rodrigo Pimentel Grohs.
             </p>
           </div>
 
