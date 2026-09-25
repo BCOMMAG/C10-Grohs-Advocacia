@@ -31,7 +31,7 @@ export function Footer() {
             </div>
             
             <p className="font-body text-xs sm:text-sm text-gray-300 max-w-sm leading-relaxed">
-              Advocacia trabalhista exercida por profissionais com especialização e atuação na advocacia privada desde 2013 para um trabalho de excelência. Atendimento ético e técnico em Curitiba/PR e em âmbito nacional.
+              Advocacia trabalhista exercida por profissionais com especialização para um trabalho de excelência. Atendimento ético e técnico em Curitiba/PR e em âmbito nacional.
             </p>
 
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/20 bg-white/5 text-xs font-heading text-[#D1D5D8] uppercase tracking-wide">
