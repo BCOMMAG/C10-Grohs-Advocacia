@@ -4,17 +4,17 @@ export function getLegalServiceSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    "@id": "https://grohs.adv.br/#legalservice",
+    "@id": "https://www.grohs.adv.br/#legalservice",
     name: OFFICE_INFO.name,
     alternateName: "Grohs Advocacia Trabalhista",
     description:
       "Advocacia trabalhista exercida com rigor técnico, especialização e atuação na advocacia privada desde 2013 em Curitiba/PR. Dr. João Rodrigo Pimentel Grohs.",
-    url: "https://grohs.adv.br",
+    url: "https://www.grohs.adv.br",
     telephone: `+${OFFICE_INFO.whatsappNumber}`,
     email: OFFICE_INFO.email,
     priceRange: "$$",
-    image: "https://grohs.adv.br/Logosemfundo_escritaescura_usarnomodoclaro.png",
-    logo: "https://grohs.adv.br/Logosemfundo_escritaescura_usarnomodoclaro.png",
+    image: "https://www.grohs.adv.br/Logosemfundo_escritaescura_usarnomodoclaro.png",
+    logo: "https://www.grohs.adv.br/Logosemfundo_escritaescura_usarnomodoclaro.png",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Av. Desembargador Hugo Simas, 1120 - Sl 207 - Bom Retiro",

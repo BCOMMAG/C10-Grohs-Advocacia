@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://grohs.adv.br/sitemap.xml',
+    sitemap: 'https://www.grohs.adv.br/sitemap.xml',
   };
 }

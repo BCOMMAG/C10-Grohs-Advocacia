@@ -20,7 +20,7 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://grohs.adv.br"),
+  metadataBase: new URL("https://www.grohs.adv.br"),
   title: {
     default: "Grohs Sociedade de Advogados | Advocacia Trabalhista em Curitiba - PR",
     template: "%s | Grohs Sociedade de Advogados",
@@ -42,12 +42,12 @@ export const metadata: Metadata = {
   creator: "Grohs Sociedade de Advogados",
   publisher: "Grohs Sociedade de Advogados",
   alternates: {
-    canonical: "https://grohs.adv.br",
+    canonical: "https://www.grohs.adv.br",
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://grohs.adv.br",
+    url: "https://www.grohs.adv.br",
     title: "Grohs Sociedade de Advogados | Advocacia Trabalhista em Curitiba - PR",
     description:
       "Advocacia trabalhista exercida por profissionais com especialização e ampla experiência para um trabalho de excelência. Dr. João Rodrigo Pimentel Grohs.",
@@ -107,6 +107,12 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <meta property="og:image" content="https://www.grohs.adv.br/og-image_1_optimized_300.jpeg" />
+        <meta property="og:image:secure_url" content="https://www.grohs.adv.br/og-image_1_optimized_300.jpeg" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Grohs Sociedade de Advogados - Advocacia Trabalhista Curitiba" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

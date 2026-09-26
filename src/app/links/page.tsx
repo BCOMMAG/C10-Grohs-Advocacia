@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   description:
     "Acesse rapidamente o WhatsApp oficial do Dr. João Rodrigo Grohs, Instagram, localização no Bom Retiro em Curitiba/PR e website institucional.",
   alternates: {
-    canonical: "https://grohs.adv.br/links",
+    canonical: "https://www.grohs.adv.br/links",
   },
   openGraph: {
     title: "Canais Oficiais & Links | Grohs Sociedade de Advogados",
     description:
       "Acesse rapidamente o WhatsApp oficial do Dr. João Rodrigo Grohs, Instagram, localização no Bom Retiro em Curitiba/PR e website institucional.",
-    url: "https://grohs.adv.br/links",
+    url: "https://www.grohs.adv.br/links",
     images: [
       {
         url: "/og-image_1_optimized_300.jpeg",
